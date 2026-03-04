@@ -15,12 +15,15 @@
 
 <body>
     <nav class="navbar">
-        <p><a href="#header">Home</a></p>
-        <p> <a href="#projects"> Projects</a></p>
-        <p> <a href="#skills"></a>Skills</p>
-        <p> <a href="education"></a>Education</p>
+        <ul class="nav-links">
+            <li><a href="#header">Home</a></li>
+            <li><a href="#developing-projects">Projects</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#education">Education</a></li>
+            <li><a class="contact-link" href="#contact-form">Contact</a></li>
+        </ul>
     </nav>
-    <header class="header">
+    <header class="header" id="header">
         <div class="Big-Hello-Text">
             <h1>Hello,</h1>
             <h1>I´m Elise Rellmar </h1>
@@ -41,9 +44,9 @@
             <button><a href="https://github.com/EliseRrell" target="_blank">GitHub</a> </button>
         </div>
     </header>
-    <main class="main">
+    <main class="main" id="main">
         <h2>My projects</h2>
-        <div class="Developing-projects">
+        <div class="Developing-projects" id="developing-projects">
             <h3> Developing projects</h3>
             <cards class="Developing-Projects-cards">
                 <p> Blog API
@@ -53,7 +56,7 @@
                 <p>
             </cards>
         </div>
-        <div class="UX-projects">
+        <div class="UX-projects" id="ux-projects">
             <h3>UX projects</h3>
             <cards class="UX-projects-cards">
                 <p> Volvo </p>
@@ -61,12 +64,12 @@
                 <p> Eleiko </p>
             </cards>
         </div>
-        <div class="Testimonials">
+        <div class="Testimonials" >
 
         </div>
-        <div class="About-Me">
+        <div class="About-Me" id="skills">
             <h2> Who am i?</h2>
-            <div class="Education">
+            <div class="Education" id="education">
                 <h3>
                     Education
                 </h3>
@@ -83,14 +86,14 @@
                     The program emphasizes C#, databases, DevOps, and security in cloud development, with upcoming
                     industry internships for hands-on experience. </p>
             </div>
-            <div class="Extracurricular">
+            <div class="Extracurricular" id="extracurricular">
                 <h5>Extracurricular</h5>
             </div>
         </div>
     </main>
-    <footer class="footer">
+    <footer class="footer" id="contact">
         <p> Contact</p>
-        <form id="contact-form">
+        <form id="Contact-form" id="contact-form">
             <input type="text" placeholder="Your Name">
             <input type="email" placeholder="Your Email">
             <textarea name="message" id="message" cols="30" rows="10" placeholder="Your Message"></textarea>
