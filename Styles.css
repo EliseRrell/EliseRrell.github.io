@@ -6,16 +6,29 @@
     background-color: #f3f3f6;
     padding: 8px 48px;
     box-sizing: border-box;
+    overflow: hidden;
+}
+
+#Rellmar-Logo {
+    height: 130px;
+    width: auto;
+    position: absolute;
+    left: 48px;
+    top: 55%;
+    transform: translateY(-50%);
 }
 
 .nav-links {
     list-style: none;
     margin: 0;
     padding: 0;
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    gap: 44px;
+    float: right;
+}
+
+.nav-links li {
+    display: inline-block;
+    margin-left: 44px;
+    vertical-align: middle;
 }
 
 .nav-links a {
