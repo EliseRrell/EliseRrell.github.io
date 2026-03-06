@@ -119,8 +119,8 @@ p {
 .UX-projects-cards h4 {
     margin: 0;
     padding: 10px 16px 0;
-    font-size: 52px;
-    line-height: 1;
+    font-size: 36px;
+    line-height: 1.1;
     font-weight: 500;
     color: #3f577d;
 }
@@ -171,8 +171,8 @@ p {
     .Developer-Projects-cards h4 {
         margin: 0;
         padding: 10px 16px 20px;
-        font-size: 52px;
-        line-height: 1;
+        font-size: 36px;
+        line-height: 1.1;
         font-weight: 500;
         color: #3f577d;
     }
