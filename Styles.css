@@ -79,6 +79,10 @@
     font-family: 'Playfair Display', serif;
     color: #0D2948;
 }
+.Contact {
+    margin-top: 20px;
+}
+
 .Media-Buttons {
     display: flex;
     align-items: center;
