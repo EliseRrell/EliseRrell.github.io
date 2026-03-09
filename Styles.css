@@ -58,6 +58,20 @@
 .Big-Hello-Text h1 {
     margin: 0;
     line-height: 1.8;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    font-size: 50px;
+    
+   
+
+
+}
+.Hero {
+    max-width: 1280px;
+    margin:  0 auto;
+    padding: 0 64px;
+    box-sizing: border-box;
 
 }
 
