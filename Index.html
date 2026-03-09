@@ -11,10 +11,13 @@
         href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="Styles.css">
+    <i class="fa-brands fa-github"></i>
+    <i class="fa-brands fa-linkedin"></i>
+    <i class="fa-solid fa-file"></i>
 </head>
 
 <body>
-    <nav class="navbar">
+    <header class="navbar">
         <img src="/Images/Logo.svg" alt="Logo" id="Rellmar-Logo">
         <ul class="nav-links">
             <li><a href="#header">Home</a></li>
@@ -23,8 +26,8 @@
             <li><a href="#education">Education</a></li>
             <li><a class="contact-link" href="#contact-form">Contact</a></li>
         </ul>
-    </nav>
-    <header class="header" id="header">
+    </header>
+    <section class="Hero" id="hero">
         <div class="Big-Hello-Text">
             <h1>Hello,</h1>
             <h1>I´m Elise Rellmar </h1>
@@ -44,7 +47,7 @@
             <button><a href="www.linkedin.com/in/elise-rellmar-0663a4257" target="_blank">LinkedIn</button>
             <button><a href="https://github.com/EliseRrell" target="_blank">GitHub</a> </button>
         </div>
-    </header>
+    </section>
     <main class="main" id="main">
         <section class="Developer-Projects" id="developer-projects">
             <h3> Developing projects</h3>
@@ -95,7 +98,7 @@
                 </li>
             </ul>
         </section>
-        <div class="Testimonials" >
+        <section class="Testimonials" aria-label="Testimonials">
 
         </div>
         <div class="About-Me" id="skills">
@@ -124,7 +127,7 @@
     </main>
     <footer class="footer" id="contact">
         <p> Contact</p>
-        <form id="Contact-form" id="contact-form">
+        <form id="contact-form">
             <input type="text" placeholder="Your Name">
             <input type="email" placeholder="Your Email">
             <textarea name="message" id="message" cols="30" rows="10" placeholder="Your Message"></textarea>
