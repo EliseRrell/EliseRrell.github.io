@@ -71,7 +71,26 @@
     padding: 0 64px;
     box-sizing: border-box;
     text-decoration: none;
+    position: relative;
+    min-height: 560px;
 
+}
+
+.Elise-Image {
+    position: absolute;
+    top: 0;
+    right: 64px;
+    width: auto;
+    height: clamp(320px, 34vw, 430px);
+    margin: 0;
+    display: block;
+}
+
+.Big-Hello-Text,
+.Hero > p,
+.Contact,
+.Media-Buttons {
+    max-width: 50%;
 }
 
 .body {
