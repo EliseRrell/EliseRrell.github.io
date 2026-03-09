@@ -81,6 +81,16 @@ body {
     font-family: 'Playfair Display', serif;
     color: #0D2948;
 }
+.Media-Buttons {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+.Media-Buttons a {
+    color: #0D2948;
+    text-decoration: none;
+}
+
 
 h1,
 h2,
