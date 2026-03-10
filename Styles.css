@@ -88,7 +88,7 @@
 }
 
 .Big-Hello-Text,
-.Hero>p,
+.Hero p,
 .Contact,
 .Media-Buttons {
     max-width: 50%;
@@ -254,6 +254,64 @@ p {
     color: #3f577d;
     font-weight: 400;
 }
+.Skills {
+    max-width: 1280px;
+    margin: 64px auto 0;
+    padding: 28px 64px 28px;   
+    box-sizing: border-box;
+    background-color: #3f577d;
+}
+
+.Skills h2 {
+    font-size: 36px;
+    margin: 0 0 20px;
+    color: #f2f3f5;
+    font-family: 'Playfair Display', serif;
+    font-weight: 400;
+}
+.Skills h3 {
+    font-size: 25px;
+    line-height: 1.5;
+    margin: 0;
+    color: #f2f3f5;
+}
+
+.Skills p {
+    margin: 0 0 14px;
+    color: #f2f3f5;
+}
+
+.Education {
+    max-width: 1280px;
+    margin: 64px auto 0;
+    padding: 0 64px;
+    box-sizing: border-box;
+}
+
+.Education h2 {
+    font-size: 36px;
+    margin: 0 0 20px;
+    color: #3f577d;
+    font-family: 'Playfair Display', serif;
+    font-weight: 400;
+}
+
+.Education h3 {
+    font-size: 25px;
+    line-height: 1.5;
+    margin: 0;
+}
+
+.Education h4 {
+    font-size: 20px;
+    line-height: 1.5;
+    margin: 0 0 2px;
+    
+}
+.Education p {
+    margin: 0 0 14px;
+}
+
 
 .Contact-Form {
     max-width: 1280px;
