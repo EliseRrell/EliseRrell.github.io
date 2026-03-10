@@ -65,9 +65,10 @@
 
 
 }
+
 .Hero {
     max-width: 1280px;
-    margin:  0 auto;
+    margin: 0 auto;
     padding: 0 64px;
     box-sizing: border-box;
     text-decoration: none;
@@ -87,7 +88,7 @@
 }
 
 .Big-Hello-Text,
-.Hero > p,
+.Hero>p,
 .Contact,
 .Media-Buttons {
     max-width: 50%;
@@ -98,6 +99,7 @@
     font-family: 'Playfair Display', serif;
     color: #0D2948;
 }
+
 .Contact {
     margin-top: 20px;
 }
@@ -107,8 +109,9 @@
     align-items: center;
     gap: 16px;
     margin-top: 15px;
-    
+
 }
+
 .Media-Buttons a {
     color: #0D2948;
     text-decoration: none;
@@ -120,13 +123,7 @@
 
 }
 
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
+h1,h2,h3,h4,h5,h6 {
     font-family: 'Playfair Display', serif;
     color: #3f577d;
 }
@@ -258,23 +255,32 @@ p {
     font-weight: 400;
 }
 
-.Contact-Form
-{
+.Contact-Form {
     max-width: 1280px;
     margin: 64px auto 0;
     padding: 0 64px;
     box-sizing: border-box;
 }
+
 .Contact-Form p {
     font-size: 36px;
     line-height: 1.5;
-    margin: 0 0 20px;
+    margin: 0 auto 20px;
+    color: #3f577d;
+    font-family: 'Playfair Display', serif;
+    font-weight: 500;
+    width: 100%;
+    max-width: 600px;
+    text-align: left;
+    
 }
+
 .Contact-Form form {
     display: flex;
     flex-direction: column;
     gap: 16px;
     width: 100%;
     max-width: 600px;
-    
+    margin: 0 auto;
+
 }
