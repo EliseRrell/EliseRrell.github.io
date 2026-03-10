@@ -286,12 +286,13 @@ p {
     margin: 64px auto 0;
     padding: 0 64px;
     box-sizing: border-box;
+    background-color: #7095B7;
 }
 
 .Education h2 {
     font-size: 36px;
     margin: 0 0 20px;
-    color: #3f577d;
+    color: #0D2948;
     font-family: 'Playfair Display', serif;
     font-weight: 400;
 }
@@ -300,12 +301,14 @@ p {
     font-size: 25px;
     line-height: 1.5;
     margin: 0;
+    color: #0D2948;
 }
 
 .Education h4 {
     font-size: 20px;
     line-height: 1.5;
     margin: 0 0 2px;
+        color: #0D2948;
     
 }
 .Education p {
@@ -324,7 +327,7 @@ p {
     font-size: 36px;
     line-height: 1.5;
     margin: 0 auto 20px;
-    color: #3f577d;
+    color: #0D2948;
     font-family: 'Playfair Display', serif;
     font-weight: 500;
     width: 100%;
