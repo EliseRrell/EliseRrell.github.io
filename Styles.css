@@ -94,10 +94,15 @@
     max-width: 50%;
 }
 
-.body {
+body {
     margin: 0;
+    padding: 0;
     font-family: 'Playfair Display', serif;
     color: #0D2948;
+    background-image: url('Images/Bg-Picture.png');
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-size: 70% auto;
 }
 
 .Contact {
@@ -286,7 +291,12 @@ p {
     margin: 64px auto 0;
     padding: 0 64px;
     box-sizing: border-box;
+}
+
+.Education{
     background-color: #7095B7;
+    width: 70%;
+
 }
 
 .Education h2 {
