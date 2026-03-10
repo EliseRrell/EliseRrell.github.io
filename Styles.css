@@ -257,3 +257,24 @@ p {
     color: #3f577d;
     font-weight: 400;
 }
+
+.Contact-Form
+{
+    max-width: 1280px;
+    margin: 64px auto 0;
+    padding: 0 64px;
+    box-sizing: border-box;
+}
+.Contact-Form p {
+    font-size: 36px;
+    line-height: 1.5;
+    margin: 0 0 20px;
+}
+.Contact-Form form {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    width: 100%;
+    max-width: 600px;
+    
+}
