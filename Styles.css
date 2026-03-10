@@ -284,3 +284,16 @@ p {
     margin: 0 auto;
 
 }
+.Contact-Form button {
+    background-color: #0D2948;
+    text-align: center;
+    color: #F9FAFB;
+    font-size: 15px;
+    font-family: hanken grotesk, sans-serif;
+}
+
+.Contact-Form button:hover {
+    background-color: #365476;
+    box-shadow: 0 0 0 3px rgba(13, 41, 72, 0.15);
+}
+
