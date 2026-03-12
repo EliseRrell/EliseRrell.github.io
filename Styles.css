@@ -260,11 +260,16 @@ p {
     font-weight: 400;
 }
 .Skills {
-    max-width: 1280px;
-    margin: 64px auto 0;
-    padding: 28px 64px 28px;   
-    box-sizing: border-box;
+    width: 100%;
+    margin: 64px 0 0;
     background-color: #3f577d;
+}
+
+.Skills-content {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 28px 64px;
+    box-sizing: border-box;
 }
 
 .Skills h2 {
@@ -287,16 +292,16 @@ p {
 }
 
 .Education {
-    max-width: 1280px;
-    margin: 64px auto 0;
-    padding: 0 64px;
-    box-sizing: border-box;
+    width: 100%;
+    margin: 0;
+    background-color: #7095B7;
 }
 
-.Education{
-    background-color: #7095B7;
-    width: 70%;
-
+.Education-content {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 64px;
+    box-sizing: border-box;
 }
 
 .Education h2 {
