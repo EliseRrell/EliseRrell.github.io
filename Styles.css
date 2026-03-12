@@ -263,7 +263,7 @@ p {
 .Skills {
     width: 100%;
     margin: 64px 0 0;
-    background-color: #3f577d;
+    background-color: #7095B7;
 }
 
 .Skills-content {
@@ -276,7 +276,7 @@ p {
 .Skills h2 {
     font-size: 36px;
     margin: 0 0 20px;
-    color: #f2f3f5;
+    color: #F8FBFF;
     font-family: 'Playfair Display', serif;
     font-weight: 400;
 }
@@ -284,12 +284,12 @@ p {
     font-size: 25px;
     line-height: 1.5;
     margin: 0;
-    color: #f2f3f5;
+    color: #F8FBFF;
 }
 
 .Skills p {
     margin: 0 0 14px;
-    color: #f2f3f5;
+    color: #F8FBFF;
 }
 
 .Education {
@@ -308,7 +308,7 @@ p {
 .Education h2 {
     font-size: 36px;
     margin: 0 0 20px;
-    color: #0D2948;
+    color: #F8FBFF;
     font-family: 'Playfair Display', serif;
     font-weight: 400;
 }
@@ -317,18 +317,19 @@ p {
     font-size: 25px;
     line-height: 1.5;
     margin: 0;
-    color: #0D2948;
+    color: #F8FBFF;
 }
 
 .Education h4 {
     font-size: 20px;
     line-height: 1.5;
     margin: 0 0 2px;
-        color: #0D2948;
+        color: #F8FBFF;
     
 }
 .Education p {
     margin: 0 0 14px;
+    color: #F8FBFF;
 }
 
 
