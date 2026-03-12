@@ -301,7 +301,7 @@ p {
 .Education-content {
     max-width: 1280px;
     margin: 0 auto;
-    padding: 0 64px;
+    padding: 0 64px 24px;
     box-sizing: border-box;
 }
 
@@ -330,6 +330,78 @@ p {
 .Education p {
     margin: 0 0 14px;
     color: #F8FBFF;
+}
+
+.Education p:last-child {
+    margin-bottom: 0;
+}
+
+.Testimonials {
+    width: 100%;
+    margin: 0;
+    background-color: #7095B7;
+}
+
+.Testimonials-content {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 24px 64px 24px;
+    box-sizing: border-box;
+}
+
+.Testimonials h2 {
+    margin: 0 0 20px;
+    font-size: 36px;
+    color: #F8FBFF;
+}
+
+.Testimonials-cards {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 24px;
+}
+
+.Testimonials-cards article {
+    background-color: #f2f3f5;
+    padding: 24px;
+    box-shadow: 0 4px 10px rgba(9, 55, 107, 0.2);
+    height: 100%;
+    box-sizing: border-box;
+}
+
+.Testimonials .text {
+    margin: 0 0 16px;
+    font-size: 20px;
+    line-height: 1.4;
+}
+
+.Testimonials .person {
+    margin: 0;
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.Testimonials .role {
+    margin: 4px 0 0;
+    font-size: 16px;
+}
+
+.Testimonials .text,
+.Testimonials .role {
+    color: #365476;
+}
+
+.Testimonials .person {
+    color: #0D2948;
+}
+
+@media (max-width: 960px) {
+    .Testimonials-cards {
+        grid-template-columns: 1fr;
+    }
 }
 
 
