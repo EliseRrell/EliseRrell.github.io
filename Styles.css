@@ -332,9 +332,15 @@ p {
 
 
 .Contact-Form {
+    width: 100%;
+    margin: 0;
+    background-color: #7095B7;
+}
+
+.Contact-Form-content {
     max-width: 1280px;
-    margin: 64px auto 0;
-    padding: 0 64px;
+    margin: 0 auto;
+    padding: 0 64px 64px;
     box-sizing: border-box;
 }
 
