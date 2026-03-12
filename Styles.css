@@ -234,6 +234,78 @@ p {
     border-radius: 0;
     overflow: hidden;
     box-shadow: 0 4px 10px rgba(9, 55, 107, 0.2);
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+body.card-open{
+    overflow:hidden;
+}
+.project-pop-up{
+    position:fixed;
+    inset:0;
+    display: none;
+    z-index: 2000;
+}
+
+.project-pop-up[aria-hidden="false"]{
+    display: block;
+}
+
+.project-card__overlay{
+    position:absolute;
+    inset:0;
+    background-color: rgba(13, 41, 72, 0.55);
+}
+
+.project-card__dialog{
+    position:relative;
+    width: min(620px, calc(100% - 32px));
+    margin:10vh auto 0;
+    background-color: #f2f3f5;
+    padding: 24px;
+    box-shadow:0 14px 30px rgba(9, 55, 107, 0.3);
+    box-sizing: border-box;
+}
+.project-card__close {
+    position: absolute;
+    top: 10px;
+    right: 12px;
+    border: none;
+    background: transparent;
+    color: #365476;
+    font-size: 26px;
+    line-height: 1;
+    cursor: pointer;
+}
+.project-pop-up h4 {
+    margin: 0 0 12px;
+    font-size: 36px;
+    color: #0D2948;
+}
+.project-pop-up p {
+    margin: 0;
+    font-size: 19px;
+    line-height: 1.5;
+    color: #27486a;
+}
+
+.project-card__github {
+    display: inline-block;
+    margin-top: 22px;
+    text-decoration: none;
+    background-color: #365476;
+    color: #f8fbff;
+    font-family: 'Hanken Grotesk', sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    padding: 10px 18px;
+    transition: background-color 0.2s ease;
+}
+
+.project-card__github:hover {
+    background-color: #2d4968;
 }
 
 .Developer-Projects-cards img {
