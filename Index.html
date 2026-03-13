@@ -178,12 +178,14 @@
         <section class="Contact-Form" id="contact-form">
             <div class="Contact-Form-content">
                 <p> Contact</p>
-                <form id="contact-form-fields" action="https://formsubmit.co/elise.rellmar@gmail.com" method="POST" target="confirmationWindow">
+                <form id="contact-form-fields" action="https://formsubmit.co/elise.rellmar@gmail.com" method="POST" target="confirmationWindow" novalidate>
                     <input type="hidden" id="next-url" name="_next" value="">
-                    <input type="text" id="name-of-contact" name="name" placeholder="Your Name" required aria-describedby="name-error"> 
+                    <input type="text" id="name-of-contact" name="name" placeholder="Your Name" required
+                        aria-describedby="name-error">
                     <p class="form-error" id="name-error" aria-live="polite"></p>
-                    
-                      <input type="email" id="contact-email" name="email" placeholder="Your Email" required aria-describedby="email-error">
+
+                    <input type="email" id="contact-email" name="email" placeholder="Your Email" required
+                        aria-describedby="email-error">
                     <p class="form-error" id="email-error" aria-live="polite"></p>
 
                     <textarea name="message" id="message" cols="30" rows="10" placeholder="Your Message" required
@@ -255,8 +257,89 @@
                 closeProjectCard();
             }
         });
+        const contactForm = document.getElementById('contact-form-fields');
+        const nameInput = document.getElementById('name-of-contact');
+        const emailInput = document.getElementById('contact-email');
+        const messageInput = document.getElementById('message');
+        const nameError = document.getElementById('name-error');
+        const emailError = document.getElementById('email-error');
+        const messageError = document.getElementById('message-error');
+        const formStatus = document.getElementById('form-status');
+        const nextUrlInput = document.getElementById('next-url');
+        const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
+        nextUrlInput.value = new URL('confirmation.html', window.location.href).href;
 
+        const setFieldError = (input, errorElement, message) => {
+            errorElement.textContent = message;
+            input.setAttribute('aria-invalid', 'true');
+            input.classList.add('input-error');
+        }
+        const clearFieldError = (input, errorElement) => {
+            errorElement.textContent = '';
+            input.removeAttribute('aria-invalid');
+            input.classList.remove('input-error');
+        }
+
+        const validateForm = () => {
+            let isValid = true;
+
+            formStatus.textContent = '';
+
+            clearFieldError(nameInput, nameError);
+            clearFieldError(emailInput, emailError);
+            clearFieldError(messageInput, messageError);
+
+            if (nameInput.value.trim().length < 2) {
+                setFieldError(nameInput, nameError, 'Please enter your name (at least 2 characters).');
+                isValid = false;
+            }
+
+            if (!emailPattern.test(emailInput.value.trim())) {
+                setFieldError(emailInput, emailError, 'Please enter a valid email address.');
+                isValid = false;
+            }
+
+            if (messageInput.value.trim().length < 10) {
+                setFieldError(messageInput, messageError, 'Please write a message with at least 10 characters.');
+                isValid = false;
+            }
+
+            return isValid;
+        };
+        contactForm.addEventListener('submit', (event) => {
+            if (!validateForm()) {
+                event.preventDefault();
+                formStatus.textContent = 'Please correct the highlighted fields and try again.';
+                return;
+            }
+            formStatus.textContent = 'Sending your message...';
+
+            const popupWindow = window.open('', 'confirmationWindow', 'width=620,height=720');
+            if (!popupWindow) {
+                contactForm.setAttribute('target', '_blank');
+            } else {
+                contactForm.setAttribute('target', 'confirmationWindow');
+            }
+        });
+
+        [nameInput, emailInput, messageInput].forEach((input) => {
+            input.addEventListener('input', () => {
+                formStatus.textContent = '';
+
+                if (input === nameInput && nameInput.value.trim().length >= 2) {
+                    clearFieldError(nameInput, nameError);
+                }
+
+                if (input === emailInput && emailPattern.test(emailInput.value.trim())) {
+                    clearFieldError(emailInput, emailError);
+                }
+
+                if (input === messageInput && messageInput.value.trim().length >= 10) {
+                    clearFieldError(messageInput, messageError);
+                }
+            });
+        });
 
     </script>
 </body>
