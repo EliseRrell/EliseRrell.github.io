@@ -512,12 +512,64 @@ body.card-open{
     margin: 0 auto;
 
 }
+
+.Contact-Form input,
+.Contact-Form textarea {
+    width: 100%;
+    padding: 12px 14px;
+    border: none;
+    box-sizing: border-box;
+    font-family: 'Hanken Grotesk', sans-serif;
+    font-size: 16px;
+}
+
+.Contact-Form input:focus,
+.Contact-Form textarea:focus {
+    outline: none;
+    border-color: #365476;
+}
+
+.Contact-Form .input-error {
+    border: 2px solid rgb(176, 21, 21);
+}
+
+.Contact-Form .form-error {
+    display: none;
+    margin: -8px 0 0;
+    width:100%;
+    min-height: 0;
+    color: rgb(176, 21, 21);
+    background-color:#f2f3f5;
+    border-left: 4px solid rgb(176, 21, 21);
+    padding:6px 10px;
+    box-sizing: border-box;
+    font-size: 16px;
+    font-weight:600;
+    line-height:1.30;
+}
+
+.Contact-Form .form-error:not(:empty) {
+    display: block;
+}
+
+.Contact-Form .form-status {
+    margin: 2px 0 0;
+    min-height: 22px;
+    color: #0D2948;
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.Contact-Form .form-status--success {
+    color: green;
+}
+
 .Contact-Form button {
     background-color: #0D2948;
     text-align: center;
     color: #F9FAFB;
     font-size: 15px;
-    font-family: hanken grotesk, sans-serif;
+    font-family: 'Hanken Grotesk', sans-serif;
 }
 
 .Contact-Form button:hover {
