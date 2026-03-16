@@ -631,6 +631,53 @@ body.card-open{
         border-radius: 0;
         box-shadow: none;
     }
+     body {
+        background-size: cover;
+        background-position: top center;
+    }
+
+    .Hero {
+        padding: 0 24px;
+        min-height: auto;
+    }
+
+    .Big-Hello-Text {
+        margin-top: 10px;
+        margin-bottom: 8px;
+        padding-left: 10px;
+        border-left: 3px solid rgba(54, 84, 118, 0.7);
+    }
+
+    .Big-Hello-Text h1 {
+        font-size: clamp(36px, 10vw, 46px);
+        line-height: 1.15;
+        letter-spacing: 0.2px;
+    }
+
+    .Big-Hello-Text h1 + h1 {
+        margin-top: 2px;
+        color: #2b496a;
+    }
+
+    .Big-Hello-Text,
+    .Hero p,
+    .Contact,
+    .Media-Buttons {
+        max-width: 100%;
+    }
+
+    .Elise-Image {
+        position: static;
+        display: block;
+        width: min(320px, 100%);
+        height: auto;
+        margin: 8px 0 0;
+    }
+
+    .Developer-Projects,
+    .UX-projects {
+        padding: 0 24px;
+    }
 
 
 }
