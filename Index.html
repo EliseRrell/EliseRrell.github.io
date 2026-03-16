@@ -313,7 +313,7 @@
                 formStatus.textContent = 'Please correct the highlighted fields and try again.';
                 return;
             }
-            formStatus.textContent = 'Sending your message...';
+            
 
             const popupWindow = window.open('', 'confirmationWindow', 'width=620,height=720');
             if (!popupWindow) {
@@ -321,6 +321,7 @@
             } else {
                 contactForm.setAttribute('target', 'confirmationWindow');
             }
+       
         });
 
         [nameInput, emailInput, messageInput].forEach((input) => {

@@ -706,6 +706,28 @@ body.card-open{
     .UX-projects-cards p {
         font-size: 20px;
     }
+    .Testimonials-cards article {
+        padding: 18px;
+    }
 
+    .Testimonials .text {
+        font-size: 18px;
+    }
+
+    .Contact-Form-content {
+        padding: 0 24px 40px;
+    }
+
+    .Contact-Form form {
+        background-color: #f2f3f5;
+        padding: 20px;
+        box-sizing: border-box;
+        box-shadow: 0 6px 16px rgba(9, 55, 107, 0.22);
+    }
+
+    .Contact-Form p {
+        font-size: 30px;
+        margin-bottom: 14px;
+    }
 
 }
