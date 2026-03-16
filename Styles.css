@@ -577,3 +577,18 @@ body.card-open{
     box-shadow: 0 0 0 3px rgba(13, 41, 72, 0.15);
 }
 
+@media (max-width: 700px) {
+    .project-card__dialog {
+        margin-top: 14vh;
+        padding: 22px;
+    }
+
+    .project-pop-up h4 {
+        font-size: 30px;
+    }
+
+    .project-pop-up p {
+        font-size: 17px;
+    }
+}
+
