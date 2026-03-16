@@ -678,6 +678,34 @@ body.card-open{
     .UX-projects {
         padding: 0 24px;
     }
+.Developer-Projects-cards,
+    .UX-projects-cards,
+    .Testimonials-cards {
+        grid-template-columns: 1fr;
+        gap: 24px;
+    }
+
+    .Developer-Projects-cards li,
+    .UX-projects-cards li,
+    .Testimonials-cards li {
+        max-width: 420px;
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    .Developer-Projects-cards img,
+    .UX-projects-cards img {
+        height: 220px;
+    }
+
+    .Developer-Projects-cards h4,
+    .UX-projects-cards h4 {
+        font-size: 26px;
+    }
+
+    .UX-projects-cards p {
+        font-size: 20px;
+    }
 
 
 }
