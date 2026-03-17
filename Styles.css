@@ -110,6 +110,32 @@ body {
     margin-top: 20px;
 }
 
+.CV-download button {
+    background-color: #365476;
+    border: none;
+    border-radius: 10px;
+    color: #F9FAFB;
+    font-family: 'Hanken Grotesk', sans-serif;
+    padding: 0;
+    transition: background-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.CV-download button:hover {
+    background-color: #2d4968;
+    box-shadow: 0 0 0 3px rgba(13, 41, 72, 0.15);
+}
+
+.CV-download button a {
+    color: #F9FAFB;
+    display: inline-block;
+    font-family: 'Hanken Grotesk', sans-serif;
+    font-size: 18px;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    padding: 8px 40px;
+    text-decoration: none;
+}
+
 .Media-Buttons {
     display: flex;
     align-items: center;
