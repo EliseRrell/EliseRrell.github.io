@@ -143,7 +143,7 @@ const GetWeather = () => {
         .then((data) => {
             const temperature = data.main.temp;
             const location = data.name;
-            document.getElementById("Ängelholm-Weather").innerHTML = `Temp in ${location} is ${temperature}°C.`;
+            document.getElementById("Ängelholm-Weather").innerHTML = `Temp in ${location} is ${(temperature).toFixed(1)}°C.`;
         })
         .catch((error) => {
             console.error("Could not fetch weather", error);
