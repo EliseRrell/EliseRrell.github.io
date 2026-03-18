@@ -131,7 +131,8 @@ const GetWeather = () => {
     const apiUrl = "https://api.openweathermap.org/data/2.5/weather";
     const apiKey = "7ba610c77d6c5b2e5bf6327a444554cc";
     const city = "Ängelholm";
-    const url = `${apiUrl}?q=${city}&appid=${apiKey}&units=metric&lang=sv`;
+    const url = `${apiUrl}?q=${city}&appid=${apiKey}&units=metric&lang=en`;
+    const weatherElement = document.getElementById("Ängelholm-Weather");
 
     fetch(url)
         .then((response) => {
@@ -143,11 +144,25 @@ const GetWeather = () => {
         .then((data) => {
             const temperature = data.main.temp;
             const location = data.name;
-            document.getElementById("Ängelholm-Weather").innerHTML = `Temp in ${location} is ${(temperature).toFixed(1)}°C.`;
+            const weatherInfo = data.weather[0];
+            const iconCode = weatherInfo.icon;
+            const iconUrl = `https://openweathermap.org/img/wn/${iconCode}@2x.png`;
+            const description = weatherInfo.description;
+
+            weatherElement.innerHTML = `
+                <img src="${iconUrl}" alt="${description}" class="weather-icon">
+                <span class="weather-text">
+                    <span class="weather-temp">Temp in ${location} is ${(temperature).toFixed(1)}°C</span>
+                    <span class="weather-description">, ${description}.</span>
+                </span>
+            `;
+            console.log(data);
         })
         .catch((error) => {
             console.error("Could not fetch weather", error);
         });
+
+       
 }
 
 GetWeather();

@@ -766,6 +766,10 @@ body.card-open{
         gap: 16px;
         text-align: center;
     }
+
+    .footer-copy {
+        text-align: center;
+    }
 }
 
 .footer {
@@ -782,6 +786,7 @@ body.card-open{
     display: flex;
     align-items: center;
     justify-content: space-between;
+    gap: 12px;
 }
 
 .footer-name {
@@ -813,10 +818,60 @@ body.card-open{
     font-family: 'Hanken Grotesk', sans-serif;
     font-size: 14px;
     color: #7095B7;
+    flex: 1;
+    text-align: right;
 }
 
 #Ängelholm-Weather {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
     font-family: 'Hanken Grotesk', sans-serif;
     font-size: 14px;
     color: #f3f3f6;
+    flex: 1;
+    min-width: 0;
+}
+
+.weather-text {
+    min-width: 0;
+    line-height: 1.35;
+}
+
+.weather-description {
+    margin-left: 4px;
+}
+
+@media (max-width: 900px) {
+    .weather-description {
+        margin-left: 2px;
+    }
+}
+
+@media (max-width: 760px) {
+    .footer-content {
+        padding: 0 20px;
+    }
+
+    #Ängelholm-Weather {
+        font-size: 13px;
+    }
+
+    .weather-description {
+        display: block;
+        margin-left: 0;
+    }
+
+    .footer-links {
+        gap: 14px;
+    }
+}
+
+.footer-links {
+    flex: 0 0 auto;
+}
+
+.weather-icon {
+    width: 28px;
+    height: 28px;
 }
