@@ -391,50 +391,6 @@ body.card-open{
     color: #F8FBFF;
 }
 
-.Education {
-    width: 100%;
-    margin: 0;
-    background-color: #7095B7;
-}
-
-.Education-content {
-    max-width: 1280px;
-    margin: 0 auto;
-    padding: 0 64px 24px;
-    box-sizing: border-box;
-}
-
-.Education h2 {
-    font-size: 36px;
-    margin: 0 0 20px;
-    color: #F8FBFF;
-    font-family: 'Playfair Display', serif;
-    font-weight: 400;
-}
-
-.Education h3 {
-    font-size: 25px;
-    line-height: 1.5;
-    margin: 0;
-    color: #F8FBFF;
-}
-
-.Education h4 {
-    font-size: 20px;
-    line-height: 1.5;
-    margin: 0 0 2px;
-        color: #F8FBFF;
-    
-}
-.Education p {
-    margin: 0 0 14px;
-    color: #F8FBFF;
-}
-
-.Education p:last-child {
-    margin-bottom: 0;
-}
-
 .Testimonials {
     width: 100%;
     margin: 0;
