@@ -13,9 +13,9 @@
     height: 130px;
     width: auto;
     position: absolute;
-    left: 48px;
+    left: 90px;
     top: 55%;
-    transform: translateY(-50%);
+    transform: translateY(-45%);
 }
 
 .nav-links {
@@ -105,6 +105,13 @@ body {
     background-repeat: no-repeat;
     background-position: top center;
     background-size: 100% 900px;
+}
+
+#hero,
+#developer-projects,
+#skills,
+#contact-form {
+    scroll-margin-top: 60px;
 }
 
 .Contact {
@@ -669,13 +676,22 @@ body.card-open{
 }
 
 @media (max-width: 960px) {
+    #hero,
+    #developer-projects,
+    #skills,
+    #contact-form {
+        scroll-margin-top: 88px;
+    }
+
     .navbar {
+        overflow: visible;
+    }
+    .navbar-inner {
         padding: 12px 20px;
         display: flex;
         flex-direction: column;
         align-items: flex-start;
         gap: 10px;
-        overflow: visible;
     }
     #Rellmar-Logo {
         display: none;
