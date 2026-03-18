@@ -572,7 +572,7 @@ body.card-open{
     box-sizing: border-box;
 }
 
-.Contact-Form p {
+.Contact-Form h2 {
     font-size: 36px;
     line-height: 1.5;
     margin: 0 auto 20px;
@@ -625,6 +625,7 @@ body.card-open{
     border-left: 4px solid rgb(176, 21, 21);
     padding:6px 10px;
     box-sizing: border-box;
+    font-family: 'Hanken Grotesk', sans-serif;
     font-size: 16px;
     font-weight:600;
     line-height:1.30;
@@ -818,7 +819,7 @@ body.card-open{
         box-shadow: 0 6px 16px rgba(9, 55, 107, 0.22);
     }
 
-    .Contact-Form p {
+    .Contact-Form h2 {
         font-size: 30px;
         margin-bottom: 14px;
     }
