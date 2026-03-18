@@ -786,8 +786,9 @@ body.card-open{
     }
 
     .card-read-more {
-        font-size: 14px;
-        padding: 8px 13px;
+        font-size: 15px;
+        padding: 10px 16px;
+        margin: 0 16px 16px auto;
     }
 
 }
