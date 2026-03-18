@@ -88,7 +88,6 @@
 
 .Big-Hello-Text,
 .Hero p,
-.Contact,
 .CV-download,
 .Media-Buttons {
     max-width: 50%;
@@ -111,10 +110,6 @@ body {
 #skills,
 #contact-form {
     scroll-margin-top: 60px;
-}
-
-.Contact {
-    margin-top: 20px;
 }
 
 .CV-download button {
@@ -374,14 +369,6 @@ body.card-open{
     color: #3f577d;
 }
 
-.Developer-Projects-cards p {
-    margin: 0;
-    padding: 8px 16px 20px;
-    font-size: 28px;
-    line-height: 1.05;
-    color: #3f577d;
-    font-weight: 400;
-}
 .Skills {
     width: 100%;
     margin: 64px 0 0;
@@ -513,6 +500,7 @@ body.card-open{
     margin: 0;
     font-size: 18px;
     font-weight: 700;
+    color: #0D2948;
 }
 
 .Testimonials .role {
@@ -523,10 +511,6 @@ body.card-open{
 .Testimonials .text,
 .Testimonials .role {
     color: #365476;
-}
-
-.Testimonials .person {
-    color: #0D2948;
 }
 
 .testimonial-person {
@@ -860,14 +844,6 @@ body.card-open{
     align-items: center;
     justify-content: space-between;
     gap: 12px;
-}
-
-.footer-name {
-    margin: 0;
-    font-family: 'Playfair Display', serif;
-    font-size: 20px;
-    color: #f3f3f6;
-    font-weight: 500;
 }
 
 .footer-links {
