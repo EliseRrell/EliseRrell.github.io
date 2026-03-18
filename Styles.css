@@ -90,6 +90,7 @@
 .Big-Hello-Text,
 .Hero p,
 .Contact,
+.CV-download,
 .Media-Buttons {
     max-width: 50%;
 }
@@ -229,6 +230,20 @@ p {
     line-height: 1.05;
     color: #3f577d;
     font-weight: 400;
+}
+
+.card-read-more {
+    display: block;
+    width: fit-content;
+    margin: 0 auto 14px 16px;
+    padding: 6px 10px;
+    border: 1px solid #365476;
+    border-radius: 6px;
+    font-family: 'Hanken Grotesk', sans-serif;
+    font-size: 12px;
+    font-weight: 600;
+    color: #365476;
+    background-color: #f2f3f5;
 }
 
 .Developer-Projects {
@@ -676,6 +691,8 @@ body.card-open{
     .Hero {
         padding: 0 24px;
         min-height: auto;
+        display: flex;
+        flex-direction: column;
     }
 
     .Big-Hello-Text {
@@ -709,6 +726,7 @@ body.card-open{
         width: min(320px, 100%);
         height: auto;
         margin: 8px 0 0;
+        order: 10;
     }
 
     .Developer-Projects,
@@ -765,6 +783,11 @@ body.card-open{
     .Contact-Form p {
         font-size: 30px;
         margin-bottom: 14px;
+    }
+
+    .card-read-more {
+        font-size: 14px;
+        padding: 8px 13px;
     }
 
 }
