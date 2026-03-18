@@ -494,6 +494,7 @@ body.card-open{
     box-shadow: 0 4px 10px rgba(9, 55, 107, 0.2);
     height: 100%;
     box-sizing: border-box;
+    border-radius: 8px;
 }
 
 .Testimonials .text {
@@ -520,6 +521,29 @@ body.card-open{
 
 .Testimonials .person {
     color: #0D2948;
+}
+
+.testimonial-person {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    margin-top: 16px;
+}
+
+.testimonial-person .person,
+.testimonial-person .role {
+    margin: 0;
+}
+
+.testimonial-avatar {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    object-fit: cover;
+    flex-shrink: 0;
+    border: 2px solid #365476;
+    padding: 2px;
+    background-color: #f2f3f5;
 }
 
 @media (max-width: 960px) {
