@@ -57,18 +57,17 @@
 
 .Big-Hello-Text h1 {
     margin: 0;
-    line-height: 1.8;
+    line-height: 1.2;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     font-size: 50px;
 
-
 }
 
 .Hero {
     max-width: 1280px;
-    margin: 0 auto 48px;
+    margin: 15vh auto 48px;
     padding: 0 64px;
     box-sizing: border-box;
     text-decoration: none;
@@ -79,10 +78,10 @@
 
 .Elise-Image {
     position: absolute;
-    top: 0;
+    top: -24px;
     right: 64px;
     width: auto;
-    height: clamp(320px, 34vw, 430px);
+    height: clamp(360px, 38vw, 500px);
     margin: 0;
     display: block;
 }
@@ -684,14 +683,12 @@ body.card-open{
     }
 
     .navbar {
-        overflow: visible;
-    }
-    .navbar-inner {
         padding: 12px 20px;
         display: flex;
         flex-direction: column;
         align-items: flex-start;
         gap: 10px;
+        overflow: visible;
     }
     #Rellmar-Logo {
         display: none;
@@ -729,6 +726,7 @@ body.card-open{
     }
 
     .Hero {
+        margin: 4vh auto 48px;
         padding: 0 24px;
         min-height: auto;
         display: flex;
