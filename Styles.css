@@ -203,6 +203,7 @@ p {
     border-radius: 0;
     overflow: hidden;
     box-shadow: 0 4px 10px rgba(9, 55, 107, 0.2);
+    cursor: pointer;
 }
 
 .UX-projects-cards img {

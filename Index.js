@@ -1,4 +1,6 @@
-const projectCards = document.querySelectorAll('.Developer-Projects .project-card');
+const projectCards = document.querySelectorAll(
+    '.Developer-Projects .project-card, .UX-projects article[role="button"]'
+);
 const projectCard = document.getElementById('project-card');
 const projectCardTitle = document.getElementById('project-card-title');
 const projectCardDescription = document.getElementById('project-card-description');
@@ -8,11 +10,15 @@ const projectCardClose = document.getElementById('project-card-close');
 const openProjectCard = (card) => {
     const title = card.dataset.projectTitle || 'Project';
     const description = card.dataset.projectDescription || 'No project description added yet.';
-    const github = card.dataset.projectGithub || '#';
+    const github = card.dataset.projectGithub;
+    const figma = card.dataset.projectFigma;
+    const externalLink = github || figma || '';
 
     projectCardTitle.textContent = title;
     projectCardDescription.textContent = description;
-    projectCardGithub.href = github;
+    projectCardGithub.href = externalLink || '#';
+    projectCardGithub.textContent = github ? 'View on GitHub' : 'View prototype';
+    projectCardGithub.style.display = externalLink ? 'inline-block' : 'none';
     projectCard.setAttribute('aria-hidden', 'false');
     document.body.classList.add('card-open');
 };
