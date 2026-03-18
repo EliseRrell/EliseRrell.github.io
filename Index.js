@@ -1,13 +1,17 @@
 const projectCards = document.querySelectorAll(
-    '.Developer-Projects .project-card, .UX-projects article[role="button"]'
+    '.project-card'
 );
 const projectCard = document.getElementById('project-card');
 const projectCardTitle = document.getElementById('project-card-title');
 const projectCardDescription = document.getElementById('project-card-description');
 const projectCardGithub = document.getElementById('project-card-github');
 const projectCardClose = document.getElementById('project-card-close');
+let lastFocusedProjectCard = null;
+
+projectCard.setAttribute('inert', '');
 
 const openProjectCard = (card) => {
+    lastFocusedProjectCard = card;
     const title = card.dataset.projectTitle || 'Project';
     const description = card.dataset.projectDescription || 'No project description added yet.';
     const github = card.dataset.projectGithub;
@@ -19,12 +23,23 @@ const openProjectCard = (card) => {
     projectCardGithub.href = externalLink || '#';
     projectCardGithub.textContent = github ? 'View on GitHub' : 'View prototype';
     projectCardGithub.style.display = externalLink ? 'inline-block' : 'none';
+    projectCard.removeAttribute('inert');
     projectCard.setAttribute('aria-hidden', 'false');
     document.body.classList.add('card-open');
+    projectCardClose.focus();
 };
 
 const closeProjectCard = () => {
+    if (projectCard.contains(document.activeElement)) {
+        if (lastFocusedProjectCard) {
+            lastFocusedProjectCard.focus();
+        } else {
+            document.activeElement.blur();
+        }
+    }
+
     projectCard.setAttribute('aria-hidden', 'true');
+    projectCard.setAttribute('inert', '');
     document.body.classList.remove('card-open');
 };
 
