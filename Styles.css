@@ -3,10 +3,14 @@
     top: 0;
     z-index: 1000;
     width: 100%;
-    background-color: #f3f3f6;
-    padding: 8px 48px;
+    background-color: rgba(243, 243, 246, 0.9);
+    padding: 10px 52px;
     box-sizing: border-box;
     overflow: hidden;
+    border-bottom: 1px solid rgba(13, 41, 72, 0.14);
+    box-shadow: 0 10px 24px rgba(13, 41, 72, 0.08);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
 }
 
 #Rellmar-Logo {
@@ -27,7 +31,7 @@
 
 .nav-links li {
     display: inline-block;
-    margin-left: 44px;
+    margin-left: 36px;
     vertical-align: middle;
 }
 
@@ -35,24 +39,84 @@
     text-decoration: none;
     color: #0D2948;
     font-family: 'Hanken Grotesk', sans-serif;
-    font-size: 20px;
-    font-weight: 500;
-    letter-spacing: 0.5px;
+    font-size: 19px;
+    font-weight: 600;
+    letter-spacing: 0.35px;
+    position: relative;
+    padding: 8px 0;
+    transition: color 0.22s ease, opacity 0.22s ease;
+}
+
+.nav-links a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+    width: 100%;
+    height: 2px;
+    border-radius: 999px;
+    background-color: rgba(54, 84, 118, 0.75);
+    transform: scaleX(0);
+    transform-origin: center;
+    transition: transform 0.22s ease;
+}
+
+.nav-links a:hover,
+.nav-links a:focus-visible {
+    color: #27486a;
+}
+
+.nav-links a:hover::after,
+.nav-links a:focus-visible::after {
+    transform: scaleX(1);
 }
 
 .nav-links .contact-link {
     color: #F9FAFB;
-    background-color: #365476;
-    padding: 10px 48px;
-    border-radius: 10px;
+    background: linear-gradient(135deg, #365476 0%, #2c4665 100%);
+    border: 1px solid rgba(13, 41, 72, 0.2);
+    padding: 10px 30px;
+    border-radius: 999px;
     letter-spacing: 0.5px;
     display: inline-block;
-    transition: background-color 0.2s ease, box-shadow 0.2s ease;
+    box-shadow: 0 8px 18px rgba(13, 41, 72, 0.18);
+    transition: background-color 0.22s ease, box-shadow 0.22s ease, transform 0.22s ease;
 }
 
-.nav-links .contact-link:hover {
-    background-color: #2d4968;
-    box-shadow: 0 0 0 3px rgba(13, 41, 72, 0.15);
+.nav-links .contact-link::after {
+    display: none;
+}
+
+.nav-links .contact-link:hover,
+.nav-links .contact-link:focus-visible {
+    background: linear-gradient(135deg, #3f5f84 0%, #304c6d 100%);
+    box-shadow: 0 12px 24px rgba(13, 41, 72, 0.24);
+    transform: translateY(-1px);
+    color: #F9FAFB;
+}
+
+@media (max-width: 1366px) and (min-width: 1025px) {
+    .navbar {
+        padding: 8px 30px;
+    }
+
+    #Rellmar-Logo {
+        height: 108px;
+        left: 48px;
+    }
+
+    .nav-links li {
+        margin-left: 28px;
+    }
+
+    .nav-links a {
+        font-size: 16px;
+        letter-spacing: 0.2px;
+    }
+
+    .nav-links .contact-link {
+        padding: 9px 22px;
+    }
 }
 
 .Big-Hello-Text h1 {
@@ -167,13 +231,34 @@ p {
     font-family: 'Hanken Grotesk', sans-serif;
 }
 
+.is-hidden {
+    display: none !important;
+}
+
 .Developer-Projects h3,
 .UX-projects h3 {
-    font-size: 30px;
-    line-height: 1.5;
-    margin: 0 0 10px;
-    color: #0D2948;
-    font-weight: 700;
+    font-size: clamp(34px, 4vw, 44px);
+    line-height: 1.2;
+    margin: 0 0 16px;
+    color: #F8FBFF;
+    font-weight: 800;
+    letter-spacing: 0.04em;
+    text-shadow: 0 3px 10px rgba(9, 55, 107, 0.45);
+    position: relative;
+    padding-bottom: 12px;
+    width: 100%;
+    text-align: center;
+}
+
+.Developer-Projects h3::after,
+.UX-projects h3::after {
+    content: "";
+    display: block;
+    width: 88px;
+    height: 4px;
+    margin: 12px auto 0;
+    border-radius: 999px;
+    background-color: rgba(248, 251, 255, 0.85);
 }
 
 .UX-projects {
@@ -188,7 +273,7 @@ p {
 
 .UX-projects-cards {
     list-style: none;
-    margin: 20px auto 0;
+    margin: 8px auto 0;
     padding: 0;
     display: grid;
     width: 100%;
@@ -203,11 +288,47 @@ p {
 
 .UX-projects-cards article {
     width: 100%;
-    background-color: #f2f3f5;
-    border-radius: 0;
+    background: linear-gradient(180deg, #f8fafc 0%, #eef2f6 100%);
+    border-radius: 14px;
+    border: 1px solid rgba(13, 41, 72, 0.12);
     overflow: hidden;
-    box-shadow: 0 4px 10px rgba(9, 55, 107, 0.2);
+    box-shadow: 0 10px 24px rgba(9, 55, 107, 0.18);
     cursor: pointer;
+    position: relative;
+    transition: transform 0.28s ease, box-shadow 0.28s ease, border-color 0.28s ease;
+}
+
+.UX-projects-cards article::after,
+.Developer-Projects-cards article::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(160deg, rgba(255, 255, 255, 0.26) 0%, rgba(255, 255, 255, 0) 38%);
+    opacity: 0;
+    transition: opacity 0.28s ease;
+    pointer-events: none;
+}
+
+.UX-projects-cards article:hover,
+.Developer-Projects-cards article:hover,
+.UX-projects-cards article:focus-visible,
+.Developer-Projects-cards article:focus-visible {
+    transform: translateY(-7px);
+    box-shadow: 0 18px 34px rgba(9, 55, 107, 0.28);
+    border-color: rgba(54, 84, 118, 0.36);
+}
+
+.UX-projects-cards article:hover::after,
+.Developer-Projects-cards article:hover::after,
+.UX-projects-cards article:focus-visible::after,
+.Developer-Projects-cards article:focus-visible::after {
+    opacity: 1;
+}
+
+.UX-projects-cards article:focus-visible,
+.Developer-Projects-cards article:focus-visible {
+    outline: 3px solid rgba(248, 251, 255, 0.9);
+    outline-offset: 2px;
 }
 
 .UX-projects-cards img {
@@ -215,6 +336,15 @@ p {
     width: 100%;
     height: 280px;
     object-fit: cover;
+    transition: transform 0.45s ease, filter 0.45s ease;
+}
+
+.UX-projects-cards article:hover img,
+.Developer-Projects-cards article:hover img,
+.UX-projects-cards article:focus-visible img,
+.Developer-Projects-cards article:focus-visible img {
+    transform: scale(1.04);
+    filter: saturate(1.06) contrast(1.03);
 }
 
 .UX-projects-cards h4 {
@@ -239,29 +369,45 @@ p {
     display: block;
     width: fit-content;
     margin: 0 auto 14px 16px;
-    padding: 6px 10px;
-    border: 1px solid #365476;
-    border-radius: 6px;
+    padding: 7px 12px;
+    border: 1px solid rgba(54, 84, 118, 0.65);
+    border-radius: 999px;
     font-family: 'Hanken Grotesk', sans-serif;
-    font-size: 12px;
+    font-size: 13px;
     font-weight: 600;
     color: #365476;
-    background-color: #f2f3f5;
+    background-color: rgba(248, 251, 255, 0.78);
+    transition: background-color 0.25s ease, color 0.25s ease, border-color 0.25s ease;
+}
+
+.project-card:hover .card-read-more,
+.project-card:focus-visible .card-read-more {
+    background-color: #365476;
+    border-color: #365476;
+    color: #f8fbff;
 }
 
 .Developer-Projects {
     max-width: 1280px;
     margin: 0 auto;
-    padding: 0 64px;
+    padding: 28px 64px 0;
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
     align-items: center;
+    background-color: #3f577d;
+}
+
+@media (min-width: 1500px) {
+    .Developer-Projects {
+        margin: clamp(52px, 6vh, 88px) auto 0;
+        background-color: transparent;
+    }
 }
 
 .Developer-Projects-cards {
     list-style: none;
-    margin: 48px auto 0;
+    margin: 12px auto 0;
     padding: 0;
     display: grid;
     width: 100%;
@@ -276,14 +422,17 @@ p {
 
 .Developer-Projects-cards article {
     width: 100%;
-    background-color: #f2f3f5;
-    border-radius: 0;
+    background: linear-gradient(180deg, #f8fafc 0%, #eef2f6 100%);
+    border-radius: 14px;
+    border: 1px solid rgba(13, 41, 72, 0.12);
     overflow: hidden;
-    box-shadow: 0 4px 10px rgba(9, 55, 107, 0.2);
+    box-shadow: 0 10px 24px rgba(9, 55, 107, 0.18);
     display: flex;
     flex-direction: column;
     height: 100%;
     cursor: pointer;
+    position: relative;
+    transition: transform 0.28s ease, box-shadow 0.28s ease, border-color 0.28s ease;
 }
 
 body.card-open{
@@ -360,6 +509,7 @@ body.card-open{
     width: 100%;
     height: 280px;
     object-fit: cover;
+    transition: transform 0.45s ease, filter 0.45s ease;
 }
 
 .Developer-Projects-cards h4 {
@@ -375,6 +525,7 @@ body.card-open{
     width: 100%;
     margin: 64px 0 0;
     background-color: #7095B7;
+    border-top: 1px solid rgba(248, 251, 255, 0.2);
 }
 
 .Skills-content {
@@ -382,6 +533,9 @@ body.card-open{
     margin: 0 auto;
     padding: 28px 64px;
     box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .Skills h2 {
@@ -400,6 +554,7 @@ body.card-open{
 
 .skill-category {
     margin-bottom: 2rem;
+    width: 100%;
 }
 
 .skill-category h3 {
@@ -418,6 +573,7 @@ body.card-open{
     list-style: none;
     padding: 0;
     margin: 0;
+    width: 100%;
 }
 
 .skill-item {
@@ -431,6 +587,21 @@ body.card-open{
     border-radius: 8px;
     font-size: 0.95rem;
     color: #F8FBFF;
+    border: 1px solid transparent;
+    box-shadow: 0 6px 14px rgba(13, 41, 72, 0.18);
+    transition: transform 0.28s ease, box-shadow 0.28s ease, background-color 0.28s ease, border-color 0.28s ease;
+}
+
+.skill-item:hover {
+    transform: translateY(-6px);
+    background-color: #46618b;
+    border-color: rgba(248, 251, 255, 0.45);
+    box-shadow: 0 12px 22px rgba(13, 41, 72, 0.35);
+}
+
+.skill-item:hover i,
+.skill-item:hover img {
+    transform: scale(1.08);
 }
 
 
@@ -438,6 +609,7 @@ body.card-open{
     font-size: 2rem;
     margin-bottom: 0.5rem;
     color: #F8FBFF;
+    transition: transform 0.28s ease;
 }
 
 .skill-item img {
@@ -446,11 +618,62 @@ body.card-open{
     display: block;
     margin-bottom: 0.5rem;
     object-fit: contain;
+    transition: transform 0.28s ease;
 }
 
 .skill-item span {
     text-align: center;
     font-family: 'Hanken Grotesk', sans-serif;
+}
+
+@media (max-width: 1024px) {
+    .Skills-content {
+        padding: 24px 24px;
+    }
+
+    .skill-list {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 14px;
+    }
+
+    .skill-item {
+        flex: 1 1 150px;
+        max-width: 170px;
+        width: 100%;
+        min-height: 108px;
+        padding: 0.9rem;
+    }
+}
+
+@media (max-width: 700px) {
+    .Skills-content {
+        padding: 22px 16px;
+    }
+
+    .skill-list {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 12px;
+    }
+
+    .skill-item {
+        flex: 1 1 120px;
+        max-width: 160px;
+        width: 100%;
+        min-height: 96px;
+        padding: 0.8rem;
+    }
+
+    .skill-item i,
+    .skill-item img {
+        font-size: 1.7rem;
+        width: 1.7rem;
+        height: 1.7rem;
+        margin-bottom: 0.4rem;
+    }
 }
 
 .Testimonials {
@@ -670,12 +893,17 @@ body.card-open{
     }
 
     .navbar {
-        padding: 12px 20px;
+        padding: 10px 14px;
         display: flex;
         flex-direction: column;
-        align-items: flex-start;
-        gap: 10px;
+        align-items: stretch;
+        gap: 8px;
         overflow: visible;
+        background-color: rgba(243, 243, 246, 0.96);
+        border-bottom: 1px solid rgba(13, 41, 72, 0.12);
+        box-shadow: 0 6px 16px rgba(13, 41, 72, 0.12);
+        backdrop-filter: blur(8px);
+        -webkit-backdrop-filter: blur(8px);
     }
     #Rellmar-Logo {
         display: none;
@@ -686,8 +914,8 @@ body.card-open{
         width: 100%;
         display: flex;
         flex-wrap: wrap;
-        gap: 8px 10px;
-        justify-content: flex-start;
+        gap: 8px;
+        justify-content: center;
     }
 
     .nav-links li {
@@ -696,16 +924,40 @@ body.card-open{
     }
 
     .nav-links a {
-        font-size: 14px;
+        font-size: 15px;
+        font-weight: 600;
         letter-spacing: 0.2px;
+        padding: 8px 12px;
+        border-radius: 999px;
+        border: 1px solid rgba(54, 84, 118, 0.2);
+        background-color: rgba(255, 255, 255, 0.62);
+    }
+
+    .nav-links a::after {
+        display: none;
+    }
+
+    .nav-links a:hover,
+    .nav-links a:focus-visible {
+        color: #0D2948;
+        background-color: rgba(255, 255, 255, 0.9);
     }
 
     .nav-links .contact-link {
-        color: #0D2948;
-        background-color: transparent;
-        padding: 0;
-        border-radius: 0;
-        box-shadow: none;
+        color: #F9FAFB;
+        background: linear-gradient(135deg, #365476 0%, #2c4665 100%);
+        border: 1px solid rgba(13, 41, 72, 0.22);
+        padding: 8px 16px;
+        border-radius: 999px;
+        box-shadow: 0 6px 14px rgba(13, 41, 72, 0.18);
+        transform: none;
+    }
+
+    .nav-links .contact-link:hover,
+    .nav-links .contact-link:focus-visible {
+        color: #F9FAFB;
+        background: linear-gradient(135deg, #3f5f84 0%, #304c6d 100%);
+        box-shadow: 0 10px 18px rgba(13, 41, 72, 0.22);
     }
      body {
         background-size: cover;
@@ -754,9 +1006,14 @@ body.card-open{
         order: 10;
     }
 
-    .Developer-Projects,
+    .Developer-Projects {
+        margin: 0 auto;
+        padding: 20px 24px 28px;
+    }
+
     .UX-projects {
-        padding: 0 24px;
+        margin-top: 0;
+        padding: 28px 24px 0;
     }
 .Developer-Projects-cards,
     .UX-projects-cards,
@@ -925,4 +1182,75 @@ body.card-open{
 .weather-icon {
     width: 28px;
     height: 28px;
+}
+
+@media (max-width: 1024px) {
+    .navbar {
+        position: fixed;
+        top: auto;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        width: 100%;
+        padding: 10px 12px calc(10px + env(safe-area-inset-bottom));
+        background-color: rgba(243, 243, 246, 0.96);
+        border-top: 1px solid rgba(13, 41, 72, 0.15);
+        border-bottom: none;
+        border-radius: 16px 16px 0 0;
+        box-shadow: 0 -10px 24px rgba(13, 41, 72, 0.16);
+        overflow: visible;
+    }
+
+    #Rellmar-Logo {
+        display: none;
+    }
+
+    .nav-links {
+        float: none;
+        margin: 0;
+        width: 100%;
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+        gap: 8px;
+    }
+
+    .nav-links li {
+        display: block;
+        margin-left: 0;
+        flex: 1 1 0;
+    }
+
+    .nav-links a {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 14px;
+        font-weight: 600;
+        padding: 10px 8px;
+        border-radius: 12px;
+        border: 1px solid rgba(54, 84, 118, 0.2);
+        background-color: rgba(255, 255, 255, 0.72);
+    }
+
+    .nav-links a::after {
+        display: none;
+    }
+
+    .nav-links .contact-link {
+        padding: 10px 8px;
+        border-radius: 12px;
+        box-shadow: none;
+    }
+
+    .footer {
+        padding-bottom: calc(84px + env(safe-area-inset-bottom));
+    }
+}
+
+@media (max-width: 420px) {
+    .nav-links a {
+        font-size: 13px;
+        padding: 9px 6px;
+    }
 }
