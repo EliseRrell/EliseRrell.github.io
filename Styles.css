@@ -1089,6 +1089,13 @@ body.card-open { overflow: hidden; }
         justify-content: flex-start !important;
     }
 
+    /* Remove mask on mobile — it blocks touch events on iOS */
+    .skill-auto-wrapper {
+        -webkit-mask-image: none !important;
+        mask-image: none !important;
+        -webkit-overflow-scrolling: auto;
+    }
+
     .skill-item {
         flex: 0 0 88px !important;
         width: 88px !important;

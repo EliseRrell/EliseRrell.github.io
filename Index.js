@@ -140,7 +140,7 @@ function initSkillCarousels() {
         const wrapper = track.parentElement;
         const originalCount = track.children.length;
         const originalItems = Array.from(track.children);
-        const isMobile = window.innerWidth <= 768;
+        const isMobile = window.matchMedia('(max-width: 768px)').matches;
         const isUxTrack = track.classList.contains('skill-ux-track');
         if (isUxTrack && !isMobile) return;
 
