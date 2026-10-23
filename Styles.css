@@ -1535,7 +1535,7 @@ body.card-open { overflow: hidden; }
     .stat-item:nth-last-child(-n+2) { border-bottom: none; }
 
     .stat-number { font-size: 15px; white-space: normal; text-align: center; }
-    .stat-label { font-size: 10px; letter-spacing: 0.5px; }
+    .stat-label { font-size: 10px; letter-spacing: 0.5px; white-space: normal; }
     .stat-icon { font-size: 15px; }
 
     /* --- ABOUT --- */
