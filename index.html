@@ -4,268 +4,396 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Portfolio of Elise Rellmar, UX designer and .NET developer showcasing projects, skills, and user-focused digital work.">
-    <meta property="og:image" content="https://eliserrell.github.io/Images/EliseMeta.png">
-    <meta property="og:title" content="Portfolio Elise Rellmar">
+    <meta name="description" content="Elise Rellmar, UX Designer and .NET Developer based in Sweden. I design with empathy and build with purpose. Open to junior roles.">
+    <meta property="og:image" content="https://eliserrell.github.io/Images/Elise-Covershot.png">
+    <meta property="og:title" content="Elise Rellmar, UX Designer & .NET Developer">
     <title>Elise Rellmar</title>
     <link rel="icon" type="image/png" href="Images/Elise.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="Styles.css">
     <script src="https://kit.fontawesome.com/86780a3e15.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
     <header class="navbar">
-        <img src="/Images/Logo.svg" alt="Logo" id="Rellmar-Logo">
-        <ul class="nav-links">
-            <li><a href="#hero">Home</a></li>
-            <li><a href="#developer-projects">Projects</a></li>
-            <li><a href="#skills">Skills</a></li>
-            <li><a class="contact-link" href="#contact-form">Contact</a></li>
-        </ul>
+        <a href="#hero" class="nav-brand" aria-label="Go to top">Elise<span>Rellmar</span></a>
+        <nav class="nav-wrapper" id="nav-wrapper" aria-label="Main navigation">
+            <ul class="nav-links" id="nav-links">
+                <li><a href="#hero">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#developer-projects">Projects</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a class="contact-link" href="#contact-form">Contact</a></li>
+            </ul>
+        </nav>
+        <button class="hamburger" id="hamburger" aria-label="Toggle navigation" aria-expanded="false" aria-controls="nav-links">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
     </header>
+
+    <!-- ===================== HERO ===================== -->
     <section class="Hero" id="hero">
-        <div class="Big-Hello-Text">
-            <h1>Hello,</h1>
-            <h1>I´m Elise Rellmar </h1>
-            <h2>UX Designer & .NET Developer</h2>
-        </div>
-        <p> I’m a UX designer who believes in clarity, structure, and meaningful experiences. I combine curiosity,
-            design thinking, and just enough code to turn ideas into intuitive interfaces.
-            Now expanding into .NET development, I bridge design and engineering to create user journeys that are not
-            only thoughtful, but technically grounded.
-            I design with people in mind and pixels with purpose. </p>
-        <p> Do you want to know more about me? Please send me a <a href="#contact-form">message</a>. </p>
-        <img src="/Images/Hero-Elise.png" alt="Image of me" class="Elise-Image">
-        <div class="CV-download">
-            <button> <a href="/CV.pdf" download="CV_EliseRellmar"> Download CV</a> </button>
-        </div>
-        <div class="Media-Buttons">
-            <a class="icon-link" href="https://www.linkedin.com/in/elise-rellmar-0663a4257" target="_blank"
-                aria-label="Visit Elise Rellmar's LinkedIn profile">
-                <i class="fa-brands fa-linkedin" aria-hidden="true"></i>
-            </a>
-            <a class="icon-link" href="https://github.com/EliseRrell" target="_blank"
-                aria-label="Visit Elise Rellmar's GitHub profile">
-                <i class="fa-brands fa-github" aria-hidden="true"></i>
-            </a>
+        <img src="Images/Hero-Elise-2.png" alt="Photo of Elise Rellmar" class="Elise-Image">
+        <div class="hero-content">
+            <div class="Big-Hello-Text">
+                <h1>Hello, I'm <span class="name-highlight">Elise Rellmar</span></h1>
+                <p class="hero-roles">
+                    <span class="role-ux">UX Designer</span>
+                    <span class="role-divider"> &amp; </span>
+                    <span class="role-dev">.NET Developer</span>
+                </p>
+            </div>
+            <p class="hero-tagline">I design with empathy and build with purpose, bridging the gap between beautiful experiences and solid, maintainable code.</p>
+            <div class="hero-actions">
+                <a class="btn-primary" href="CV.pdf" download="CV_EliseRellmar">Download CV</a>
+                <a class="btn-secondary" href="#contact-form">Let's talk →</a>
+            </div>
+            <div class="Media-Buttons">
+                <a class="icon-link" href="https://www.linkedin.com/in/elise-rellmar-0663a4257" target="_blank" aria-label="Visit Elise Rellmar's LinkedIn profile">
+                    <i class="fa-brands fa-linkedin" aria-hidden="true"></i>
+                </a>
+                <a class="icon-link" href="https://github.com/EliseRrell" target="_blank" aria-label="Visit Elise Rellmar's GitHub profile">
+                    <i class="fa-brands fa-github" aria-hidden="true"></i>
+                </a>
+            </div>
         </div>
     </section>
+
+    <!-- ===================== STATS BAR ===================== -->
+    <div class="stats-bar">
+        <div class="stats-bar-inner">
+            <div class="stat-item">
+                <i class="fa-solid fa-layer-group stat-icon" aria-hidden="true"></i>
+                <span class="stat-number">UX + Dev</span>
+                <span class="stat-label">Both disciplines, one person</span>
+            </div>
+            <div class="stat-divider" aria-hidden="true"></div>
+            <div class="stat-item">
+                <i class="fa-solid fa-building stat-icon" aria-hidden="true"></i>
+                <span class="stat-number">Volvo · Eleiko · Holmedal</span>
+                <span class="stat-label">Real-world brand briefs</span>
+            </div>
+            <div class="stat-divider" aria-hidden="true"></div>
+            <div class="stat-item">
+                <i class="fa-solid fa-arrow-right-arrow-left stat-icon" aria-hidden="true"></i>
+                <span class="stat-number">Wireframe to Deploy</span>
+                <span class="stat-label">From first sketch to live product</span>
+            </div>
+            <div class="stat-divider" aria-hidden="true"></div>
+            <div class="stat-item">
+                <i class="fa-solid fa-calendar-check stat-icon" aria-hidden="true"></i>
+                <span class="stat-number">Let's Build</span>
+                <span class="stat-label">Looking for a team to join</span>
+            </div>
+        </div>
+    </div>
+
     <main class="main" id="main">
-        <section class="Developer-Projects" id="developer-projects">
-            <h3> Development projects</h3>
+
+        <!-- ===================== ABOUT ===================== -->
+        <section class="About animate-section" id="about">
+            <div class="About-content">
+                <div class="about-text">
+                    <p class="section-label">About me</p>
+                    <h2>I think in systems.<br>I design for people.</h2>
+                    <p>I'm a UX designer turned developer with a genuine curiosity about how things work, both from the user's perspective and under the hood. During my studies I discovered something that most teams haven't figured out yet: the best digital products come from people who understand both sides of the equation.</p>
+                    <p>That's the role I want to play. Whether it means sketching user flows in Figma or writing clean C# APIs, I care about making the whole experience right, not just the part that's technically "my job".</p>
+                    <ul class="about-values">
+                        <li><i class="fa-solid fa-check" aria-hidden="true"></i> I ask "why" before "how"</li>
+                        <li><i class="fa-solid fa-check" aria-hidden="true"></i> I write code I'd be happy to read in six months</li>
+                        <li><i class="fa-solid fa-check" aria-hidden="true"></i> I believe accessibility is non-negotiable</li>
+                        <li><i class="fa-solid fa-check" aria-hidden="true"></i> I thrive in teams that give and take feedback openly</li>
+                    </ul>
+                </div>
+                <div class="about-approach">
+                    <p class="section-label">How I work</p>
+                    <div class="approach-steps">
+                        <div class="approach-step">
+                            <div class="step-icon"><i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i></div>
+                            <div class="step-text">
+                                <strong>Understand</strong>
+                                <span>Research, interviews &amp; defining the real problem</span>
+                            </div>
+                        </div>
+                        <div class="approach-step">
+                            <div class="step-icon"><i class="fa-solid fa-pen-ruler" aria-hidden="true"></i></div>
+                            <div class="step-text">
+                                <strong>Design</strong>
+                                <span>Wireframes, flows &amp; high-fidelity prototypes</span>
+                            </div>
+                        </div>
+                        <div class="approach-step">
+                            <div class="step-icon"><i class="fa-solid fa-code" aria-hidden="true"></i></div>
+                            <div class="step-text">
+                                <strong>Build</strong>
+                                <span>Clean, maintainable code that matches the intent</span>
+                            </div>
+                        </div>
+                        <div class="approach-step">
+                            <div class="step-icon"><i class="fa-solid fa-rotate" aria-hidden="true"></i></div>
+                            <div class="step-text">
+                                <strong>Iterate</strong>
+                                <span>Test, refine &amp; improve based on real feedback</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===================== DEVELOPMENT PROJECTS ===================== -->
+        <section class="Developer-Projects animate-section" id="developer-projects">
+            <div class="Developer-Projects-inner">
+            <p class="section-label light">Development</p>
+            <h3>Built from scratch</h3>
             <ul class="Developer-Projects-cards">
                 <li>
                     <article class="Blog-API project-card" role="button" tabindex="0"
-                        aria-label="Open project details for Blog API" data-project-title="Blog API"
-                        data-project-description="An API for blog post managment. The project includes user management, roles, blog posts, categories, and comments, all structured with clean separation between entities and DTOs."
+                        aria-label="Open project details for Blog API"
+                        data-project-title="Blog API"
+                        data-project-category="Development"
+                        data-project-challenge="Build a scalable blog backend with multiple user roles, without coupling API contracts to internal data models."
+                        data-project-approach="RESTful API in ASP.NET Core with EF Core, JWT auth, role-based authorisation and clean DTO separation."
+                        data-project-outcome="A well-structured API ready to connect to any frontend, demonstrating production-level design patterns."
+                        data-project-tech="C# · ASP.NET Core · Entity Framework · SQL · JWT"
                         data-project-github="https://github.com/EliseRrell/Blog-API.git">
+                        <div class="card-category-badge dev-badge">Dev</div>
                         <img src="Images/Blog.jpg" alt="A desk setting with a laptop and a cup of coffee">
-                        <h4>Blog API</h4>
-                        <span class="card-read-more" aria-hidden="true">Read more</span>
+                        <div class="card-body">
+                            <h4>Blog API</h4>
+                            <p class="card-summary">RESTful API with roles, auth &amp; clean architecture</p>
+                            <span class="card-read-more" aria-hidden="true">View case study →</span>
+                        </div>
                     </article>
                 </li>
                 <li>
                     <article class="Bank-App project-card" role="button" tabindex="0"
-                        aria-label="Open project details for Bank-App" data-project-title="Bank API"
-                        data-project-description="A banking project focused on core account logic, transactions and secure handling of user operations."
+                        aria-label="Open project details for Bank App"
+                        data-project-title="Bank API"
+                        data-project-category="Development"
+                        data-project-challenge="Implement core banking operations accounts, deposits, withdrawals and transfers with a focus on data integrity and secure user handling."
+                        data-project-approach="REST API in C# and ASP.NET Core with clean architecture, secure financial operations and clear separation of business logic."
+                        data-project-outcome="A functional banking backend demonstrating security-first thinking and clean code patterns."
+                        data-project-tech="C# · ASP.NET Core · Entity Framework · SQL"
                         data-project-github="https://github.com/EliseRrell/BankAppApi.git">
+                        <div class="card-category-badge dev-badge">Dev</div>
                         <img src="Images/Bank.jpg" alt="Image of a bank">
-                        <h4>Bank API</h4>
-                        <span class="card-read-more" aria-hidden="true">Read more</span>
+                        <div class="card-body">
+                            <h4>Bank API</h4>
+                            <p class="card-summary">Secure financial operations with clean architecture</p>
+                            <span class="card-read-more" aria-hidden="true">View case study →</span>
+                        </div>
                     </article>
                 </li>
                 <li>
-                    <article class="Zoo-Webbpage project-card" role="button" tabindex="0" 
-                        aria-label="Open project details for Zoo Webbpage" data-project-title="Zoo Webbpage"
-                        data-project-description="A responsive website concept for a zoo with clear navigation, visual storytelling and visitor information."
+                    <article class="FreakyFashion project-card" role="button" tabindex="0"
+                        aria-label="Open project details for FreakyFashion"
+                        data-project-title="FreakyFashion"
+                        data-project-category="Development"
+                        data-project-challenge="Build a complete e-commerce platform end-to-end, from database design to working frontend, with a real CI/CD pipeline."
+                        data-project-approach="Full-stack MVC app with ASP.NET Core and SQL Server product management, admin interface and Azure Pipelines for automated deployment."
+                        data-project-outcome="A live, CI/CD-connected e-commerce platform showing full-stack ability from migrations to production delivery."
+                        data-project-tech="C# · ASP.NET Core MVC · Entity Framework · SQL Server · Azure Pipelines"
+                        data-project-github="https://github.com/EliseRrell/FreakyFashion.git">
+                        <div class="card-category-badge dev-badge">Dev</div>
+                        <img src="Images/FreakyFashion.jpg" alt="FreakyFashion e-commerce platform">
+                        <div class="card-body">
+                            <h4>FreakyFashion</h4>
+                            <p class="card-summary">Full-stack e-commerce with CI/CD &amp; admin panel</p>
+                            <span class="card-read-more" aria-hidden="true">View case study →</span>
+                        </div>
+                    </article>
+                </li>
+                <li>
+                    <article class="Zoo-Website project-card" role="button" tabindex="0"
+                        aria-label="Open project details for Zoo Website"
+                        data-project-title="Zoo Website"
+                        data-project-category="Development"
+                        data-project-challenge="Design and build a responsive zoo website that communicates clearly to visitors of all ages, without any frameworks."
+                        data-project-approach="Semantic HTML, CSS and vanilla JavaScript with a focus on accessibility, information hierarchy and visual storytelling."
+                        data-project-outcome="A fully responsive, accessible multi-page website built on strong front-end fundamentals."
+                        data-project-tech="HTML · CSS · JavaScript · Responsive Design · Accessibility"
                         data-project-github="https://github.com/EliseRrell/Zoo-Webbpage.git">
+                        <div class="card-category-badge dev-badge">Dev</div>
                         <img src="Images/Zoo.jpg" alt="Image of animals in a zoo">
-                        <h4>Zoo Webbpage</h4>
-                        <span class="card-read-more" aria-hidden="true">Read more</span>
+                        <div class="card-body">
+                            <h4>Zoo Website</h4>
+                            <p class="card-summary">Responsive, accessible frontend without frameworks</p>
+                            <span class="card-read-more" aria-hidden="true">View case study →</span>
+                        </div>
                     </article>
                 </li>
             </ul>
+            </div>
         </section>
-        <section class="UX-projects" id="ux-projects">
-            <h3>UX projects</h3>
+
+        <!-- ===================== UX PROJECTS ===================== -->
+        <section class="UX-projects animate-section" id="ux-projects">
+            <p class="section-label light">UX Design</p>
+            <h3>Designed with intent</h3>
             <ul class="UX-projects-cards">
                 <li>
+                    <article class="TaxiPortal project-card" role="button" tabindex="0"
+                        aria-label="Open project details for Taxi Carrier Portal"
+                        data-project-title="Taxi Carrier Portal"
+                        data-project-url="taxi.html"
+                        data-project-category="UX + Development"
+                        data-project-challenge="Taxi carriers needed a dedicated portal to manage operations both technically solid and easy to use for non-technical users."
+                        data-project-approach="Built during my internship at Holmedal Data. Started by mapping carrier workflows before writing any code, applying UX thinking throughout."
+                        data-project-outcome="A working portal shipped in production my first contribution as a developer on a live client project."
+                        data-project-tech="SvelteKit 5 · TypeScript · Tailwind CSS · .NET 10 · ASP.NET Core · Dapper · PostgreSQL">
+                        <div class="card-category-badge ux-dev-badge">UX + Dev <i class="fa-solid fa-star card-featured-star"></i></div>
+                        <img src="Images/taxi.jpg" alt="Portal interface for taxi carriers">
+                        <div class="card-body">
+                            <h4>Taxi Carrier Portal</h4>
+                            <p class="card-summary">UX-driven development during internship at Holmedal Data</p>
+                            <p class="card-year">2026</p>
+                            <span class="card-read-more" aria-hidden="true">View case study →</span>
+                        </div>
+                    </article>
+                </li>
+                <li>
                     <article class="Dizparc project-card" role="button" tabindex="0"
-                     aria-label="Open project details for Dizparc" data-project-title="Dizparc"
-                                         data-project-description="A project management tool designed to streamline workflows and provide task tracking for efficient project execution.">
-                        <img src="Images/Dizparc-Picture.jpg" alt="Project managment photo">
-                        <h4>Dizparc</h4>
-                        <p>2025 </p>
-                        <span class="card-read-more" aria-hidden="true">Read more</span>
+                        aria-label="Open project details for Dizparc"
+                        data-project-title="Dizparc"
+                        data-project-url="dizparc.html"
+                        data-project-category="UX Design"
+                        data-project-challenge="Project documentation was fragmented across people, files and responsibilities causing delays, unclear ownership and poor communication."
+                        data-project-approach="Mapped the process through stakeholder workshops, synthesised pain points and developed a platform concept with personas, sitemap and hi-fi prototypes."
+                        data-project-outcome="A concept platform centralising process, meetings, documents and responsibilities in one place."
+                        data-project-tech="Figma · UX Research · Workshop Facilitation · Prototyping">
+                        <div class="card-category-badge ux-badge">UX</div>
+                        <img src="Images/Dizparc-Picture.jpg" alt="Project management interface">
+                        <div class="card-body">
+                            <h4>Dizparc</h4>
+                            <p class="card-summary">Project documentation platform designed through research and workshops</p>
+                            <p class="card-year">2025</p>
+                            <span class="card-read-more" aria-hidden="true">View case study →</span>
+                        </div>
                     </article>
                 </li>
                 <li>
                     <article class="Eleiko project-card" role="button" tabindex="0"
-                     aria-label="Open project details for Eleiko" data-project-title="Eleiko"
-                     data-project-description="Service design concept for Eleiko, a global leader in strength training equipment, focused on creating a circular solution for second hand products through a digital platform connecting users, gyms and Eleiko for sustainable equipment lifecycle management.">
-                        <img src="Images/Eleiko.jpg" alt="Eleiko weights">
-                        <h4>Eleiko</h4>
-                        <p>2024</p>
-                        <span class="card-read-more" aria-hidden="true">Read more</span>
+                        aria-label="Open project details for Eleiko"
+                        data-project-title="Eleiko"
+                        data-project-url="eleiko.html"
+                        data-project-category="UX Design"
+                        data-project-challenge="Eleiko's premium equipment had no second-life pathway used gear was discarded rather than resold, a sustainability gap and a missed brand opportunity."
+                        data-project-approach="Service design research across individual users, gyms and Eleiko's business context, followed by a circular platform concept connecting all three."
+                        data-project-outcome="A service design blueprint for a second-hand marketplace reducing waste while opening a new revenue stream."
+                        data-project-tech="Figma · Service Design · User Research · Journey Mapping · Stakeholder Analysis">
+                        <div class="card-category-badge ux-badge">Service Design</div>
+                        <img src="Images/Eleiko.jpg" alt="Eleiko strength training weights">
+                        <div class="card-body">
+                            <h4>Eleiko</h4>
+                            <p class="card-summary">Service design for a circular second-hand equipment platform</p>
+                            <p class="card-year">2024</p>
+                            <span class="card-read-more" aria-hidden="true">View case study →</span>
+                        </div>
                     </article>
                 </li>
                 <li>
                     <article class="Volvo project-card" role="button" tabindex="0"
-                     aria-label="Open project details for Volvo" data-project-title="Volvo"
-                     data-project-description="A concept for a digital fleet platform for Volvo customers to sharing vehicles, with features for vehicle management, booking and usage tracking to optimize fleet utilization. The project enthezed on user research and jurney mapping."
-                      data-project-figma="https://www.figma.com/proto/0HM8xSFq9PLTrP9bGhu7pt/L%C3%A5sApp?node-id=880-8477&starting-point-node-id=880%3A8477&t=EALSrk7ZWIsQUYd3-1">
-                        <img src="Images/Picture-Volvo.jpg" alt="Image of Volvo car">
-                        <h4>Volvo</h4>
-                        <p>2023</p>
-                        <span class="card-read-more" aria-hidden="true">Read more</span>
+                        aria-label="Open project details for Volvo Fleet"
+                        data-project-title="Volvo Fleet"
+                        data-project-url="volvo.html"
+                        data-project-category="UX Design"
+                        data-project-challenge="Owners of older Volvo cars had no digital way to share or manage vehicle access a gap between premium hardware and the digital experience."
+                        data-project-approach="User research and journey mapping to identify friction points, then a Figma concept for a key-sharing app with permissions, conditions and access history."
+                        data-project-outcome="A validated prototype for a key-sharing experience, backed by user research surfacing needs not formally documented before."
+                        data-project-tech="Figma · UX Research · Journey Mapping · Prototyping · Interaction Design"
+                        data-project-figma="https://www.figma.com/proto/0HM8xSFq9PLTrP9bGhu7pt/L%C3%A5sApp?node-id=880-8477&starting-point-node-id=880%3A8477&t=EALSrk7ZWIsQUYd3-1">
+                        <div class="card-category-badge ux-badge">UX</div>
+                        <img src="Images/Picture-Volvo.jpg" alt="Volvo car on road">
+                        <div class="card-body">
+                            <h4>Volvo Fleet</h4>
+                            <p class="card-summary">Fleet-sharing app concept backed by deep user research</p>
+                            <p class="card-year">2023</p>
+                            <span class="card-read-more" aria-hidden="true">View case study →</span>
+                        </div>
                     </article>
                 </li>
             </ul>
         </section>
-        <div class="Skills" id="skills">
+
+        <!-- ===================== SKILLS ===================== -->
+        <div class="Skills animate-section" id="skills">
             <div class="Skills-content">
-                <h2>Skills</h2>
-                
+                <p class="section-label">Toolkit</p>
+                <h2>Skills &amp; tools</h2>
+                <p class="skills-intro">A blend of design craft and engineering ability, because great products need both.</p>
+
+                <!-- UX: carousel (auto-scrolls on mobile, static on desktop) -->
                 <div class="skill-category">
                     <h3>UX Design</h3>
-                    <ul class="skill-list">
-                        <li class="skill-item">
-                            <i class="fa-brands fa-square-figma"></i>
-                            <span>Figma</span>
-                        </li>
-                        <li class="skill-item">
-                            <i class="fa-solid fa-magnifying-glass"></i>
-                            <span>UX Research</span>
-                        </li>
-                        <li class="skill-item">
-                            <i class="fa-solid fa-pen"></i>
-                            <span>Prototyping</span>
-                        </li>
-                        <li class="skill-item">
-                            <i class="fa-solid fa-comments"></i>
-                            <span>Usability Testing</span>
-                        </li>
-                    </ul>
+                    <div class="skill-auto-wrapper">
+                        <ul class="skill-auto-track skill-ux-track">
+                            <li class="skill-item"><i class="fa-brands fa-square-figma" aria-hidden="true"></i><span>Figma</span></li>
+                            <li class="skill-item"><i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i><span>UX Research</span></li>
+                            <li class="skill-item"><i class="fa-solid fa-pen" aria-hidden="true"></i><span>Prototyping</span></li>
+                            <li class="skill-item"><i class="fa-solid fa-comments" aria-hidden="true"></i><span>Usability Testing</span></li>
+                            <li class="skill-item"><i class="fa-solid fa-sitemap" aria-hidden="true"></i><span>Info Architecture</span></li>
+                            <li class="skill-item"><i class="fa-solid fa-map" aria-hidden="true"></i><span>Journey Mapping</span></li>
+                            <li class="skill-item"><i class="fa-solid fa-people-group" aria-hidden="true"></i><span>Workshop Facilitation</span></li>
+                            <li class="skill-item"><i class="fa-solid fa-network-wired" aria-hidden="true"></i><span>Service Design</span></li>
+                        </ul>
+                    </div>
                 </div>
-                
+
+                <!-- Dev: infinite auto-scroll carousel -->
                 <div class="skill-category">
                     <h3>Development</h3>
-                    <ul class="skill-list">
-                        <li class="skill-item">
-                            <i class="fa-brands fa-html5"></i>
-                            <span>HTML</span>
-                        </li>
-                        <li class="skill-item">
-                            <i class="fa-brands fa-css3-alt"></i>
-                            <span>CSS</span>
-                        </li>
-                        <li class="skill-item">
-                            <i class="fa-brands fa-js"></i>
-                            <span>JavaScript</span>
-                        </li>
-                        <li class="skill-item">
-                            <img src="Images/C%23Logo.svg" alt="" aria-hidden="true">
-                            <span>C#</span>
-                        </li>
-                        <li class="skill-item">
-                            <i class="fa-solid fa-display"></i>
-                            <span>.NET</span>
-                        </li>
-                        <li class="skill-item">
-                            <i class="fa-solid fa-database"></i>
-                            <span>SQL</span>
-                        </li>
-                        <li class="skill-item">
-                            <i class="fa-brands fa-github"></i>
-                            <span>GitHub</span>
-                        </li>
-                    </ul>
+                    <div class="skill-auto-wrapper">
+                        <ul class="skill-auto-track" id="skill-dev-track">
+                            <li class="skill-item"><i class="fa-brands fa-html5" aria-hidden="true"></i><span>HTML</span></li>
+                            <li class="skill-item"><i class="fa-brands fa-css3-alt" aria-hidden="true"></i><span>CSS</span></li>
+                            <li class="skill-item"><i class="fa-brands fa-js" aria-hidden="true"></i><span>JavaScript</span></li>
+                            <li class="skill-item"><img src="Images/C%23Logo.svg" alt="" aria-hidden="true"><span>C#</span></li>
+                            <li class="skill-item"><i class="fa-solid fa-display" aria-hidden="true"></i><span>ASP.NET Core</span></li>
+                            <li class="skill-item"><i class="fa-solid fa-layer-group" aria-hidden="true"></i><span>Entity Framework</span></li>
+                            <li class="skill-item"><i class="fa-solid fa-plug" aria-hidden="true"></i><span>REST API</span></li>
+                            <li class="skill-item"><i class="fa-solid fa-database" aria-hidden="true"></i><span>SQL</span></li>
+                            <li class="skill-item"><i class="fa-brands fa-github" aria-hidden="true"></i><span>GitHub</span></li>
+                            <li class="skill-item"><i class="fa-solid fa-cloud" aria-hidden="true"></i><span>Azure Pipelines</span></li>
+                            <li class="skill-item"><i class="fa-solid fa-database" aria-hidden="true"></i><span>PostgreSQL</span></li>
+                            <li class="skill-item"><i class="fa-solid fa-bolt" aria-hidden="true"></i><span>SvelteKit</span></li>
+                            <li class="skill-item"><i class="fa-solid fa-robot" aria-hidden="true"></i><span>GitHub Copilot</span></li>
+                            <li class="skill-item"><i class="fa-solid fa-key" aria-hidden="true"></i><span>JWT</span></li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </div>
-        <section class="Testimonials is-hidden" id="testimonials" aria-label="Testimonials">
-            <div class="Testimonials-content">
-                <h2>Testimonials</h2>
-                <ul class="Testimonials-cards">
-                    <li>
-                        <article>
-                            <p class="text">"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-                                tempor incididunt ut labore et dolore magna aliqua.
-                                Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-                                commodo consequat."</p>
-                            <div class="testimonial-person">
-                                <img src="Images/ProfileAvatars/Avatar1.png" alt="John Doe" class="testimonial-avatar">
-                                <div>
-                                    <p class="person">John Doe</p>
-                                    <p class="role">UX Lead, Student Project Partner</p>
-                                </div>
-                            </div>
-                        </article>
-                    </li>
-                    <li>
-                        <article>
-                            <p class="text">"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-                                tempor incididunt ut labore et dolore magna aliqua.
-                                Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-                                commodo consequat."</p>
-                            <div class="testimonial-person">
-                                <img src="Images/ProfileAvatars/Avatar2.png" alt="Jane Doe" class="testimonial-avatar">
-                                <div>
-                                    <p class="person">Jane Doe</p>
-                                    <p class="role">Product Owner, Course Collaboration</p>
-                                </div>
-                            </div>
-                        </article>
-                    </li>
-                    <li>
-                        <article>
-                            <p class="text">"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-                                tempor incididunt ut labore et dolore magna aliqua.
-                                Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-                                commodo consequat."</p>
-                            <div class="testimonial-person">
-                                <img src="Images/ProfileAvatars/Avatar3.png" alt="Doe Doe" class="testimonial-avatar">
-                                <div>
-                                    <p class="person">Doe Doe</p>
-                                    <p class="role">Developer, Team Project</p>
-                                </div>
-                            </div>
-                        </article>
-                    </li>
-                </ul>
-            </div>
-        </section>
-        <section class="Contact-Form" id="contact-form">
+
+        <!-- ===================== CONTACT ===================== -->        <!-- ===================== CONTACT ===================== -->        <!-- ===================== CONTACT ===================== -->        <!-- ===================== CONTACT ===================== -->
+        <section class="Contact-Form animate-section" id="contact-form">
             <div class="Contact-Form-content">
-                <h2>Contact</h2>
+                <p class="section-label">Get in touch</p>
+                <h2>Let's work together</h2>
+                <p class="contact-intro">Open to junior developer and UX roles. Also happy to hear about projects, collaborations, or just a good conversation about products.</p>
                 <form id="contact-form-fields" action="https://formsubmit.co/elise.rellmar@gmail.com" method="POST" target="confirmationWindow" novalidate>
                     <input type="hidden" id="next-url" name="_next" value="">
-                    <input type="text" id="name-of-contact" name="name" placeholder="Your Name" required
-                        aria-describedby="name-error">
+                    <input type="text" id="name-of-contact" name="name" placeholder="Your Name" required aria-describedby="name-error">
                     <p class="form-error" id="name-error" aria-live="polite"></p>
-
-                    <input type="email" id="contact-email" name="email" placeholder="Your Email" required
-                        aria-describedby="email-error">
+                    <input type="email" id="contact-email" name="email" placeholder="Your Email" required aria-describedby="email-error">
                     <p class="form-error" id="email-error" aria-live="polite"></p>
-
-                    <textarea name="message" id="message" cols="30" rows="10" placeholder="Your Message" required
-                        minlength="10" aria-describedby="message-error"></textarea>
+                    <textarea name="message" id="message" cols="30" rows="8" placeholder="Your Message" required minlength="10" aria-describedby="message-error"></textarea>
                     <p class="form-error" id="message-error" aria-live="polite"></p>
-
-                    <button type="submit">Submit</button>
+                    <button type="submit">Send message</button>
                     <p class="form-status" id="form-status" aria-live="polite"></p>
                 </form>
             </div>
         </section>
     </main>
+
     <footer class="footer">
         <div class="footer-content">
             <div id="Ängelholm-Weather"></div>
+            <p class="footer-tagline">Designed &amp; built by Elise Rellmar</p>
             <div class="footer-links">
                 <a href="https://www.linkedin.com/in/elise-rellmar-0663a4257" target="_blank" aria-label="LinkedIn">
                     <i class="fa-brands fa-linkedin" aria-hidden="true"></i>
@@ -277,18 +405,38 @@
             <p class="footer-copy">&copy; 2026 Elise Rellmar</p>
         </div>
     </footer>
+
+    <!-- ===================== PROJECT POPUP ===================== -->
     <div class="project-pop-up" id="project-card" aria-hidden="true">
         <div class="project-card__overlay" data-close-card="true"></div>
         <div class="project-card__dialog" role="dialog" aria-modal="true" aria-labelledby="project-card-title">
-            <button class="project-card__close" id="project-card-close" aria-label="Close project details">x</button>
+            <button class="project-card__close" id="project-card-close" aria-label="Close project details">
+                <i class="fa-solid fa-xmark" aria-hidden="true"></i>
+            </button>
+            <div class="popup-category-label" id="project-card-category"></div>
             <h4 id="project-card-title"></h4>
-            <p id="project-card-description"></p>
-            <a id="project-card-github" class="project-card__github" href="#" target="_blank"
-                rel="noopener noreferrer">View on GitHub</a>
+            <div class="popup-sections">
+                <div class="popup-section">
+                    <p class="popup-section-label"><i class="fa-solid fa-circle-question" aria-hidden="true"></i> Challenge</p>
+                    <p id="popup-challenge"></p>
+                </div>
+                <div class="popup-section">
+                    <p class="popup-section-label"><i class="fa-solid fa-gears" aria-hidden="true"></i> Approach</p>
+                    <p id="popup-approach"></p>
+                </div>
+                <div class="popup-section">
+                    <p class="popup-section-label"><i class="fa-solid fa-circle-check" aria-hidden="true"></i> Outcome</p>
+                    <p id="popup-outcome"></p>
+                </div>
+            </div>
+            <div id="project-card-tech" class="project-card__tech"></div>
+            <div class="project-card__actions">
+                <a id="project-card-github" class="project-card__github" href="#" target="_blank" rel="noopener noreferrer">View on GitHub</a>
+                <a id="project-card-casestudy" class="project-card__casestudy" href="#">Read case study →</a>
+            </div>
         </div>
     </div>
 
     <script src="Index.js" defer></script>
 </body>
-
 </html>

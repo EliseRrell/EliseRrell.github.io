@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Taxi Carrier Portal, Case Study by Elise Rellmar. UX-driven development during internship at Holmedal Data.">
+    <title>Taxi Carrier Portal, Elise Rellmar</title>
+    <link rel="icon" type="image/png" href="Images/Elise.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="Styles.css">
+    <link rel="stylesheet" href="casestudy.css">
+    <script src="https://kit.fontawesome.com/86780a3e15.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+    <header class="navbar">
+        <a href="index.html" class="nav-brand" aria-label="Back to portfolio">Elise<span>Rellmar</span></a>
+        <nav class="nav-wrapper" id="nav-wrapper" aria-label="Main navigation">
+            <ul class="nav-links" id="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html#about">About</a></li>
+                <li><a href="index.html#developer-projects">Projects</a></li>
+                <li><a href="index.html#skills">Skills</a></li>
+                <li><a class="contact-link" href="index.html#contact-form">Contact</a></li>
+            </ul>
+        </nav>
+        <button class="hamburger" id="hamburger" aria-label="Toggle navigation" aria-expanded="false" aria-controls="nav-links">
+            <span></span><span></span><span></span>
+        </button>
+    </header>
+
+    <main class="cs-main">
+
+        <!-- HERO -->
+        <section class="cs-hero">
+            <a href="index.html#ux-projects" class="cs-back">
+                <i class="fa-solid fa-arrow-left"></i> Back to projects
+            </a>
+            <div class="cs-hero-meta">
+                <span class="cs-tag">UX + Development</span>
+                <span class="cs-tag">2026</span>
+                <span class="cs-tag">SvelteKit · .NET 10 · PostgreSQL</span>
+            </div>
+            <h1>Taxi Carrier Portal</h1>
+            <p class="cs-hero-sub">Rebuilding, securing and redesigning the portal where taxi carriers manage their entire operation</p>
+        </section>
+
+        <!-- OVERVIEW -->
+        <section class="cs-section cs-overview">
+            <div class="cs-section-inner">
+                <div class="cs-overview-grid">
+                    <div class="cs-overview-block">
+                        <p class="cs-label">The challenge</p>
+                        <p>The existing carrier portal was built on legacy Delphi code. The goal was to modernise it into a usable, secure web portal, keeping the domain logic intact while delivering a significantly better user experience.</p>
+                    </div>
+                    <div class="cs-overview-block">
+                        <p class="cs-label">My role</p>
+                        <p>Developer and portal owner at Holmedal Data. I set the requirements, owned the domain knowledge, steered design decisions, and led security reviews, end to end.</p>
+                    </div>
+                    <div class="cs-overview-block">
+                        <p class="cs-label">Key outcome</p>
+                        <p>13 fully mobile-adapted pages shipped to production. A new 2FA login replacing unsalted MD5. Driving shifts (Körpass) with taximeter-verified shift economics. 99.5% of shifts with correct data.</p>
+                    </div>
+                    <div class="cs-overview-block">
+                        <p class="cs-label">Stack</p>
+                        <p>SvelteKit 5 · Svelte 5 · TypeScript · Tailwind CSS · .NET 10 · ASP.NET Core · Dapper · PostgreSQL</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- PROCESS -->
+        <section class="cs-section">
+            <div class="cs-section-inner">
+                <p class="cs-label">The process</p>
+                <h2>Domain first, then design</h2>
+
+                <div class="cs-process-steps">
+
+                    <div class="cs-step">
+                        <div class="cs-step-number">01</div>
+                        <div class="cs-step-content">
+                            <h3>Understanding the domain</h3>
+                            <p>Before designing or building anything, I mapped out how the taxi carrier business actually works: how settlements differ from revenue, how a shift's economics come from the taximeter's binary reports rather than the booking system, and what the legacy Delphi portal was doing right. The old source code became the truth source for business logic throughout the project.</p>
+                        </div>
+                    </div>
+
+                    <div class="cs-step">
+                        <div class="cs-step-number">02</div>
+                        <div class="cs-step-content">
+                            <h3>Dashboard and vehicle tracking</h3>
+                            <p>The dashboard gives carriers an immediate overview: revenue for the year, recent settlements, and a live map of all vehicles with their current status. The design went through several iterations to balance information density with readability, particularly on mobile where cards stack into two columns and the map scrolls below.</p>
+                        </div>
+                    </div>
+
+                    <figure class="cs-screenshot cs-screenshot--wide">
+                        <img src="Images/taxi-portal/desktop-dashboard-hel.png" alt="Dashboard showing map, key figures and recent settlements">
+                        <figcaption>Dashboard with live vehicle map, annual key figures and settlement history.</figcaption>
+                    </figure>
+
+                    <div class="cs-step">
+                        <div class="cs-step-number">03</div>
+                        <div class="cs-step-content">
+                            <h3>Live vehicle map</h3>
+                            <p>The vehicle position page gives carriers a real-time view of where all their vehicles are. Clicking a vehicle shows its current status and details. It replaced a process where carriers had to call drivers or check separately to know what was happening in the fleet.</p>
+                        </div>
+                    </div>
+
+                    <figure class="cs-screenshot cs-screenshot--wide">
+                        <img src="Images/taxi-portal/desktop-fordonsposition-vald.png" alt="Live vehicle position map with a selected vehicle and its details">
+                        <figcaption>Live vehicle map with selected vehicle and current status.</figcaption>
+                    </figure>
+
+                    <div class="cs-step">
+                        <div class="cs-step-number">04</div>
+                        <div class="cs-step-content">
+                            <h3>Driving shifts (Körpass), the heart of the portal</h3>
+                            <p>Driving shifts (Körpass) is the feature carriers use most. It shows every driving shift in a Gantt-like timeline: who drove, in which vehicle, exactly when and what it earned. The economic data is not entered manually; it is decoded directly from the taximeter's binary reports, making it tamper-resistant and verifiable.</p>
+                            <p>One design challenge that shaped this feature early on was that taxi drivers do not work in calendar days. A shift often starts late at night and continues into the early hours of the next morning. My initial design used a day-by-day view, which broke as soon as a shift crossed midnight. The timeline approach solved this properly by anchoring each shift to when it actually started, regardless of what day it ended on.</p>
+                            <p>The calendar navigation lets carriers step through weeks, spot anomalies and compare shifts against typical performance. This was the feature I spent the most time on, and the one carriers responded to most strongly.</p>
+                        </div>
+                    </div>
+
+                    <figure class="cs-screenshot cs-screenshot--wide">
+                        <img src="Images/taxi-portal/desktop-korpass-hel.png" alt="Driving shift overview with timeline and economic data">
+                        <figcaption>Driving shifts with a Gantt-like timeline and taximeter-verified economics.</figcaption>
+                    </figure>
+
+                    <div class="cs-step">
+                        <div class="cs-step-number">05</div>
+                        <div class="cs-step-content">
+                            <h3>Settlements and statistics</h3>
+                            <p>The settlements page gives carriers a clear view of what they are owed or charged each period, with downloadable PDFs and payment status in one place. Previously this information was scattered and hard to verify. The statistics page lets carriers follow trends over time by vehicle, driver and month, which makes it easier to spot what is actually driving revenue and what is not.</p>
+                        </div>
+                    </div>
+
+                    <figure class="cs-screenshot cs-screenshot--wide">
+                        <img src="Images/taxi-portal/desktop-avrakningar-hel.png" alt="Settlements page with status and PDF access">
+                        <figcaption>Settlements overview with payment status and downloadable PDFs.</figcaption>
+                    </figure>
+
+                    <figure class="cs-screenshot cs-screenshot--wide">
+                        <img src="Images/taxi-portal/desktop-statistik-hel.png" alt="Statistics reports with monthly and vehicle breakdowns">
+                        <figcaption>Statistics by vehicle, driver and month for trend tracking.</figcaption>
+                    </figure>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- KEY INSIGHT -->
+        <section class="cs-section cs-insight-section">
+            <div class="cs-section-inner">
+                <blockquote class="cs-insight">
+                    "Good software starts with understanding the business, not the tech stack."
+                </blockquote>
+            </div>
+        </section>
+
+        <!-- OUTCOME -->
+        <section class="cs-section">
+            <div class="cs-section-inner">
+                <p class="cs-label">Outcome</p>
+                <h2>What I delivered</h2>
+                <p class="cs-body-large">A fully rebuilt, production-deployed carrier portal with 13 mobile-adapted pages, a secure 2FA login, Driving shifts (Körpass) with verified shift economics, and clear settlement and statistics views. My first real experience of project ownership, combining domain research, UX decisions, full-stack development and security work.</p>
+
+                <div class="cs-outcomes-grid">
+                    <div class="cs-outcome-item">
+                        <i class="fa-solid fa-check-circle"></i>
+                        <p>A complete portal rebuilt from scratch and shipped to real users</p>
+                    </div>
+                    <div class="cs-outcome-item">
+                        <i class="fa-solid fa-check-circle"></i>
+                        <p>Legacy security replaced with modern two-factor authentication</p>
+                    </div>
+                    <div class="cs-outcome-item">
+                        <i class="fa-solid fa-check-circle"></i>
+                        <p>Tailored for real user needs, not just technical requirements</p>
+                    </div>
+                    <div class="cs-outcome-item">
+                        <i class="fa-solid fa-check-circle"></i>
+                        <p>Every shift's earnings decoded directly from the taximeter, not entered manually</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- REFLECTION -->
+        <section class="cs-section">
+            <div class="cs-section-inner cs-reflection">
+                <p class="cs-label">Reflection</p>
+                <h2>What I learned</h2>
+                <p>This project pushed me across the full stack in ways a course project never could. Owning the domain knowledge, making design calls, and being responsible for security and performance simultaneously taught me that good software requires understanding the whole system, not just the layer you are currently working in. The combination of UX thinking and development meant fewer surprises and better decisions at every stage.</p>
+            </div>
+        </section>
+
+        <!-- NAVIGATION -->
+        <nav class="cs-project-nav">
+            <a href="index.html#ux-projects" class="cs-nav-back">
+                <i class="fa-solid fa-arrow-left"></i> Back to projects
+            </a>
+            <div class="cs-next-projects">
+                <a href="dizparc.html" class="cs-nav-next">
+                    Next: Dizparc <i class="fa-solid fa-arrow-right"></i>
+                </a>
+            </div>
+        </nav>
+
+    </main>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <p class="footer-tagline">Elise Rellmar, UX Designer &amp; .NET Developer</p>
+            <div class="footer-links">
+                <a href="https://www.linkedin.com/in/elise-rellmar-0663a4257" target="_blank" aria-label="LinkedIn">
+                    <i class="fa-brands fa-linkedin"></i>
+                </a>
+                <a href="https://github.com/EliseRrell" target="_blank" aria-label="GitHub">
+                    <i class="fa-brands fa-github"></i>
+                </a>
+            </div>
+            <p class="footer-copy">&copy; 2026 Elise Rellmar</p>
+        </div>
+    </footer>
+
+    <script src="Index.js" defer></script>
+</body>
+</html>

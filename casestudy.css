@@ -1,0 +1,1089 @@
+/* ============================================================
+   CASE STUDY PAGE STYLES
+   Shared by dizparc.html, eleiko.html, volvo.html
+   ============================================================ */
+
+.cs-main {
+    min-height: 100vh;
+    background: #ffffff;
+    position: relative;
+    z-index: 0;
+}
+
+/* ── HERO ────────────────────────────────────────────────── */
+.cs-hero {
+    padding: 48px var(--section-px) 40px;
+    background-color: #F0F4F8;
+    border-bottom: 1px solid rgba(13, 41, 72, 0.08);
+}
+
+.cs-back {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    text-decoration: none;
+    color: #365476;
+    font-family: 'Hanken Grotesk', sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    margin-bottom: 28px;
+    transition: gap 0.2s ease, opacity 0.2s ease;
+}
+
+.cs-back:hover { gap: 12px; opacity: 0.75; }
+
+.cs-hero-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 20px;
+}
+
+.cs-tag {
+    display: inline-block;
+    font-family: 'Hanken Grotesk', sans-serif;
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 0.3px;
+    color: #365476;
+    background-color: rgba(54, 84, 118, 0.1);
+    padding: 4px 12px;
+    border-radius: 999px;
+}
+
+.cs-hero h1 {
+    font-size: clamp(36px, 5vw, 64px);
+    color: #0D2948;
+    margin: 0 0 12px;
+    line-height: 1.1;
+}
+
+.cs-hero-sub {
+    font-family: 'Hanken Grotesk', sans-serif;
+    font-size: clamp(16px, 1.5vw, 20px);
+    color: #3a5070;
+    margin: 0;
+    max-width: 640px;
+}
+
+/* ── SECTIONS ────────────────────────────────────────────── */
+.cs-section {
+    padding: 72px 0;
+    border-bottom: 1px solid rgba(13, 41, 72, 0.07);
+}
+
+.cs-section:last-of-type { border-bottom: none; }
+
+.cs-section-inner {
+    padding: 0 var(--section-px);
+}
+
+.cs-label {
+    font-family: 'Hanken Grotesk', sans-serif;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #365476;
+    margin: 0 0 12px;
+}
+
+.cs-section h2 {
+    font-size: clamp(24px, 3vw, 38px);
+    color: #0D2948;
+    margin: 0 0 32px;
+    line-height: 1.2;
+}
+
+.cs-body-large {
+    font-family: 'Hanken Grotesk', sans-serif;
+    font-size: 18px;
+    line-height: 1.7;
+    color: #1e3a5a;
+    max-width: 760px;
+    margin: 0 0 40px;
+}
+
+/* ── OVERVIEW GRID ───────────────────────────────────────── */
+.cs-overview {
+    background-color: #F8FAFC;
+}
+
+.cs-overview-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 32px;
+}
+
+.cs-overview-block p:first-child {
+    font-family: 'Hanken Grotesk', sans-serif;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #365476;
+    margin: 0 0 8px;
+}
+
+.cs-overview-block p:last-child {
+    font-family: 'Hanken Grotesk', sans-serif;
+    font-size: 15px;
+    line-height: 1.6;
+    color: #1e3a5a;
+    margin: 0;
+}
+
+/* ── PROCESS STEPS ───────────────────────────────────────── */
+.cs-process-steps {
+    display: flex;
+    flex-direction: column;
+    gap: 56px;
+}
+
+.cs-step {
+    display: grid;
+    grid-template-columns: 80px 1fr;
+    gap: 32px;
+    align-items: start;
+}
+
+.cs-step-number {
+    font-family: 'Playfair Display', serif;
+    font-size: 48px;
+    font-weight: 700;
+    color: rgba(54, 84, 118, 0.15);
+    line-height: 1;
+    padding-top: 4px;
+    flex-shrink: 0;
+}
+
+.cs-step-content h3 {
+    font-size: clamp(18px, 2vw, 24px);
+    color: #0D2948;
+    margin: 0 0 16px;
+    line-height: 1.3;
+}
+
+.cs-step-content p {
+    font-family: 'Hanken Grotesk', sans-serif;
+    font-size: 16px;
+    line-height: 1.7;
+    color: #1e3a5a;
+    margin: 0 0 12px;
+}
+
+.cs-step-content p:last-child { margin-bottom: 0; }
+
+/* ── IMAGE PLACEHOLDERS ──────────────────────────────────── */
+.cs-image-placeholder {
+    background: linear-gradient(180deg, #f7fafc 0%, #edf3f7 100%);
+    border: 1px solid rgba(54, 84, 118, 0.14);
+    border-radius: 14px;
+    padding: 42px 28px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    text-align: center;
+    color: #7095B7;
+    margin-left: 112px; /* aligns with step content */
+    min-height: 220px;
+}
+
+.cs-image-placeholder--wide {
+    margin-left: 0;
+}
+
+.cs-image-placeholder i {
+    font-size: 30px;
+    opacity: 0.6;
+    color: #5a7290;
+}
+
+.cs-image-placeholder p {
+    font-family: 'Hanken Grotesk', sans-serif;
+    font-size: 18px;
+    font-weight: 600;
+    color: #365476;
+    margin: 0;
+}
+
+.cs-image-placeholder span {
+    font-family: 'Hanken Grotesk', sans-serif;
+    font-size: 14px;
+    line-height: 1.5;
+    color: #5a7090;
+    max-width: 540px;
+}
+
+/* ── REAL SCREENSHOTS ────────────────────────────────────── */
+.cs-screenshot {
+    margin: 0 0 8px;
+    margin-left: 112px;
+}
+
+.cs-screenshot img {
+    width: 100%;
+    max-width: 100%;
+    border-radius: 10px;
+    border: 1px solid rgba(13, 41, 72, 0.1);
+    display: block;
+}
+
+/* Phone mockup screenshots — keep them phone-sized */
+.cs-screenshot--phone {
+    max-width: 280px;
+}
+
+.cs-step-content--with-image {
+    display: flex;
+    gap: 24px;
+    align-items: flex-start;
+}
+
+.cs-step-text {
+    flex: 1;
+}
+
+.cs-step-aside-image {
+    flex-shrink: 0;
+    width: 160px;
+    margin: 0;
+}
+
+.cs-step-aside-image--large {
+    width: 240px;
+}
+
+.cs-step-aside-image img {
+    width: 100%;
+    border-radius: 8px;
+    border: 1px solid rgba(13, 41, 72, 0.1);
+    display: block;
+    object-fit: cover;
+}
+
+@media (max-width: 640px) {
+    .cs-step-content--with-image {
+        flex-direction: column;
+    }
+    .cs-step-aside-image {
+        width: 100%;
+        max-width: 200px;
+    }
+    .cs-step-aside-image--large {
+        width: 100%;
+        max-width: 100%;
+    }
+}
+
+/* Process timeline (horizontal phases) */
+.cs-process-timeline {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 0;
+    position: relative;
+    padding: 24px 0 20px;
+}
+
+.cs-process-timeline::before {
+    content: "";
+    position: absolute;
+    top: 35px;
+    left: 10%;
+    right: 10%;
+    height: 2px;
+    background: linear-gradient(90deg, #1a3a60, #365476, #3a6898);
+    z-index: 0;
+}
+
+.cs-process-timeline__phase {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 0 8px;
+    position: relative;
+    z-index: 1;
+}
+
+.cs-process-timeline__dot {
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background: #365476;
+    border: 3px solid #ffffff;
+    box-shadow: 0 0 0 2px #365476;
+    margin-bottom: 14px;
+    flex-shrink: 0;
+}
+
+.cs-process-timeline__label {
+    font-family: 'Hanken Grotesk', sans-serif;
+    font-size: 13px;
+    font-weight: 700;
+    color: #0D2948;
+    margin-bottom: 6px;
+}
+
+.cs-process-timeline__desc {
+    font-family: 'Hanken Grotesk', sans-serif;
+    font-size: 12px;
+    line-height: 1.5;
+    color: #5a7090;
+}
+
+@media (max-width: 768px) {
+    .cs-process-timeline {
+        grid-template-columns: 1fr 1fr;
+        gap: 16px;
+    }
+    .cs-process-timeline::before { display: none; }
+}
+
+/* Persona card */
+.cs-persona {
+    background: #F8FAFC;
+    border: 1px solid rgba(54, 84, 118, 0.14);
+    border-radius: 14px;
+    overflow: hidden;
+}
+
+.cs-persona__header {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    padding: 22px 26px;
+    background: linear-gradient(135deg, #1a3a60 0%, #2a5080 100%);
+}
+
+.cs-persona__avatar {
+    width: 52px;
+    height: 52px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.12);
+    border: 2px solid rgba(255,255,255,0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 22px;
+    color: #f0f6ff;
+    flex-shrink: 0;
+}
+
+.cs-persona__name {
+    font-size: 20px;
+    color: #f0f6ff;
+    margin: 0 0 4px;
+    line-height: 1.2;
+}
+
+.cs-persona__title {
+    font-family: 'Hanken Grotesk', sans-serif;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 1.2px;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.6);
+    margin: 0;
+}
+
+.cs-persona__grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0;
+}
+
+.cs-persona__block {
+    padding: 20px 22px;
+    border-right: 1px solid rgba(54, 84, 118, 0.1);
+}
+
+.cs-persona__block:last-child { border-right: none; }
+
+.cs-persona__block-label {
+    font-family: 'Hanken Grotesk', sans-serif;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1.6px;
+    text-transform: uppercase;
+    color: #365476;
+    margin: 0 0 12px;
+}
+
+.cs-persona__block ul {
+    margin: 0;
+    padding: 0 0 0 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+}
+
+.cs-persona__block ul li {
+    font-family: 'Hanken Grotesk', sans-serif;
+    font-size: 14px;
+    line-height: 1.5;
+    color: #1e3a5a;
+}
+
+/* Sitemap / feature tree */
+.cs-sitemap {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0;
+}
+
+.cs-sitemap__root {
+    display: inline-block;
+    padding: 10px 28px;
+    background: #0D2948;
+    color: #f0f6ff;
+    font-family: 'Hanken Grotesk', sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    border-radius: 8px;
+    position: relative;
+    margin-bottom: 0;
+}
+
+.cs-sitemap__root::after {
+    content: "";
+    position: absolute;
+    bottom: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 2px;
+    height: 20px;
+    background: rgba(54, 84, 118, 0.3);
+}
+
+.cs-sitemap__branches {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 12px;
+    width: 100%;
+    padding-top: 20px;
+    border-top: 2px solid rgba(54, 84, 118, 0.15);
+    margin-top: 20px;
+    position: relative;
+}
+
+.cs-sitemap__branch {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    align-items: center;
+}
+
+.cs-sitemap__node--main {
+    padding: 8px 12px;
+    background: #365476;
+    color: #f0f6ff;
+    font-family: 'Hanken Grotesk', sans-serif;
+    font-size: 13px;
+    font-weight: 600;
+    border-radius: 6px;
+    text-align: center;
+    width: 100%;
+}
+
+.cs-sitemap__children {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    width: 100%;
+}
+
+.cs-sitemap__children span {
+    display: block;
+    padding: 5px 10px;
+    background: #edf3f8;
+    border: 1px solid rgba(54, 84, 118, 0.12);
+    border-radius: 5px;
+    font-family: 'Hanken Grotesk', sans-serif;
+    font-size: 12px;
+    color: #365476;
+    text-align: center;
+}
+
+@media (max-width: 768px) {
+    .cs-persona__grid { grid-template-columns: 1fr; }
+    .cs-persona__block { border-right: none; border-bottom: 1px solid rgba(54, 84, 118, 0.1); }
+    .cs-persona__block:last-child { border-bottom: none; }
+    .cs-sitemap__branches { grid-template-columns: repeat(2, 1fr); }
+}
+
+/* Medium screenshots (portrait photos, process artifacts) */
+.cs-screenshot--medium {
+    margin-left: 112px;
+    max-width: 520px;
+}
+
+/* Wide screenshots (desktop, process maps, etc) */
+.cs-screenshot--wide {
+    margin-left: 0;
+    max-width: 100%;
+}
+
+.cs-screenshot--wide img {
+    max-height: 600px;
+    width: 100%;
+    object-fit: contain;
+    object-position: top center;
+    background: #f8fafc;
+}
+
+/* UI mockup screenshots — show full layout clearly */
+.cs-screenshot--ui img {
+    max-height: 500px;
+    object-fit: contain;
+    object-position: top center;
+    background: #f8fafc;
+}
+
+.cs-screenshot figcaption {
+    font-family: 'Hanken Grotesk', sans-serif;
+    font-size: 13px;
+    color: #7095B7;
+    margin-top: 10px;
+    padding-left: 4px;
+}
+
+/* ── SCREENSHOT GRID (side-by-side mobile screens) ────────── */
+.cs-screenshot-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 280px));
+    gap: 24px;
+    margin-left: 112px;
+    justify-content: start;
+}
+
+.cs-screenshot-grid--wide {
+    margin-left: 0;
+    justify-content: center;
+}
+
+.cs-screenshot-grid .cs-screenshot {
+    margin: 0;
+    max-width: 100%;
+}
+
+@media (max-width: 768px) {
+    .cs-screenshot-grid {
+        grid-template-columns: repeat(2, 1fr);
+        margin-left: 0;
+        justify-content: start;
+    }
+}
+
+/* ── INSIGHT CARDS (replaces image placeholders when no screenshot exists) ─── */
+.cs-insight-card {
+    background: #F8FAFC;
+    border: 1px solid rgba(54, 84, 118, 0.14);
+    border-left: 3px solid #365476;
+    border-radius: 10px;
+    padding: 24px 28px;
+    margin-left: 112px;
+}
+
+.cs-insight-card--wide {
+    margin-left: 0;
+}
+
+.cs-insight-card__label {
+    font-family: 'Hanken Grotesk', sans-serif;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1.8px;
+    text-transform: uppercase;
+    color: #365476;
+    margin: 0 0 14px;
+}
+
+.cs-insight-card__list {
+    margin: 0;
+    padding: 0 0 0 18px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.cs-insight-card__list li {
+    font-family: 'Hanken Grotesk', sans-serif;
+    font-size: 15px;
+    line-height: 1.6;
+    color: #1e3a5a;
+}
+
+/* ── DIAGRAM COMPONENTS (stakeholder map, journey map, concept cards) ──────── */
+
+.cs-diagram {
+    margin-bottom: 8px;
+}
+
+.cs-diagram__label {
+    font-family: 'Hanken Grotesk', sans-serif;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1.8px;
+    text-transform: uppercase;
+    color: #365476;
+    margin: 0 0 14px;
+}
+
+/* Stakeholder map */
+.cs-stakeholder {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    border-radius: 14px;
+    overflow: hidden;
+    border: 1px solid rgba(54, 84, 118, 0.12);
+}
+
+.cs-stakeholder__zone {
+    padding: 18px 24px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.cs-stakeholder__zone--inner  { background: #1a3a60; }
+.cs-stakeholder__zone--middle { background: #2a5080; }
+.cs-stakeholder__zone--outer  { background: #3a6898; }
+
+.cs-stakeholder__zone-label {
+    font-family: 'Hanken Grotesk', sans-serif;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1.4px;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.6);
+    min-width: 140px;
+    flex-shrink: 0;
+}
+
+.cs-stakeholder__tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.cs-stakeholder__tags span {
+    font-family: 'Hanken Grotesk', sans-serif;
+    font-size: 13px;
+    font-weight: 500;
+    color: #f0f6ff;
+    background: rgba(255,255,255,0.1);
+    border: 1px solid rgba(255,255,255,0.18);
+    padding: 4px 12px;
+    border-radius: 999px;
+}
+
+/* Journey map */
+.cs-journey {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0;
+    border: 1px solid rgba(54, 84, 118, 0.12);
+    border-radius: 14px;
+    overflow: hidden;
+}
+
+.cs-journey__phase {
+    padding: 20px 18px;
+    border-right: 1px solid rgba(54, 84, 118, 0.1);
+    background: #F8FAFC;
+}
+
+.cs-journey__phase:last-child { border-right: none; }
+
+.cs-journey__phase-header {
+    font-family: 'Hanken Grotesk', sans-serif;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1.4px;
+    text-transform: uppercase;
+    color: #365476;
+    margin-bottom: 12px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid rgba(54, 84, 118, 0.1);
+}
+
+.cs-journey__emotion {
+    font-size: 22px;
+    margin-bottom: 14px;
+}
+
+.cs-journey__emotion--neutral { color: #7095B7; }
+.cs-journey__emotion--low     { color: #c0392b; }
+.cs-journey__emotion--high    { color: #2e7d50; }
+
+.cs-journey__points {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.cs-journey__points li {
+    font-family: 'Hanken Grotesk', sans-serif;
+    font-size: 13px;
+    line-height: 1.5;
+    color: #1e3a5a;
+    padding-left: 14px;
+    position: relative;
+}
+
+.cs-journey__points--pain li::before {
+    content: "–";
+    position: absolute;
+    left: 0;
+    color: #c0392b;
+    font-weight: 700;
+}
+
+/* Concept cards */
+.cs-concept-cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.cs-concept-card {
+    background: #F8FAFC;
+    border: 1px solid rgba(54, 84, 118, 0.14);
+    border-radius: 14px;
+    padding: 28px 26px;
+}
+
+.cs-concept-card__eyebrow {
+    font-family: 'Hanken Grotesk', sans-serif;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1.6px;
+    text-transform: uppercase;
+    color: #365476;
+    margin: 0 0 8px;
+}
+
+.cs-concept-card h3 {
+    font-size: clamp(18px, 1.8vw, 22px);
+    color: #0D2948;
+    margin: 0 0 10px;
+    line-height: 1.25;
+}
+
+.cs-concept-card__desc {
+    font-family: 'Hanken Grotesk', sans-serif;
+    font-size: 14px;
+    line-height: 1.6;
+    color: #3a5070;
+    margin: 0 0 18px;
+}
+
+.cs-concept-card__features {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 9px;
+}
+
+.cs-concept-card__features li {
+    font-family: 'Hanken Grotesk', sans-serif;
+    font-size: 14px;
+    line-height: 1.5;
+    color: #1e3a5a;
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+}
+
+.cs-concept-card__features li i {
+    color: #365476;
+    font-size: 12px;
+    margin-top: 3px;
+    flex-shrink: 0;
+}
+
+@media (max-width: 768px) {
+    .cs-journey { grid-template-columns: 1fr 1fr; }
+    .cs-concept-cards { grid-template-columns: 1fr; }
+    .cs-stakeholder__zone { flex-direction: column; align-items: flex-start; gap: 10px; }
+    .cs-stakeholder__zone-label { min-width: unset; }
+}
+
+/* ── INSIGHT QUOTE ───────────────────────────────────────── */
+.cs-insight-section {
+    background-color: #0D2948;
+    border-bottom: none;
+}
+
+.cs-insight {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(20px, 2.5vw, 28px);
+    font-style: italic;
+    color: #F0F4F8;
+    line-height: 1.5;
+    margin: 0;
+    max-width: 800px;
+    border-left: 3px solid #365476;
+    padding-left: 28px;
+}
+
+/* ── SLIDESHOW ───────────────────────────────────────────── */
+.cs-slideshow {
+    border-radius: 14px;
+    overflow: hidden;
+    border: 1px solid rgba(54, 84, 118, 0.12);
+    background: #f8fafc;
+}
+
+.cs-slideshow__track {
+    position: relative;
+    overflow: hidden;
+    background: #edf3f7;
+}
+
+.cs-slideshow__slide {
+    display: none;
+}
+
+.cs-slideshow__slide.active {
+    display: block;
+    width: 100%;
+}
+
+.cs-slideshow__slide img {
+    display: block;
+    margin: 0 auto;
+    max-height: 480px;
+    max-width: 100%;
+    width: auto;
+    height: auto;
+}
+
+.cs-slideshow__caption {
+    font-family: 'Hanken Grotesk', sans-serif;
+    font-size: 13px;
+    color: #7095B7;
+    padding: 12px 20px;
+    margin: 0;
+    border-top: 1px solid rgba(54, 84, 118, 0.08);
+    background: #ffffff;
+}
+
+.cs-slideshow__controls {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px 20px;
+    background: #ffffff;
+    border-top: 1px solid rgba(54, 84, 118, 0.08);
+}
+
+.cs-slideshow__btn {
+    background: none;
+    border: 1px solid rgba(54, 84, 118, 0.25);
+    border-radius: 999px;
+    width: 36px;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    color: #365476;
+    transition: background 0.2s ease, border-color 0.2s ease;
+    font-size: 13px;
+}
+
+.cs-slideshow__btn:hover {
+    background: rgba(54, 84, 118, 0.08);
+    border-color: #365476;
+}
+
+.cs-slideshow__dots {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+}
+
+.cs-slideshow__dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: rgba(54, 84, 118, 0.2);
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.cs-slideshow__dot--active {
+    background: #365476;
+    transform: scale(1.3);
+}
+
+/* ── NDA NOTE ────────────────────────────────────────────── */
+.cs-nda-note {
+    font-family: 'Hanken Grotesk', sans-serif;
+    font-size: 12px;
+    color: #7095B7;
+    margin: 12px 0 0;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.cs-nda-note i {
+    font-size: 11px;
+    opacity: 0.7;
+}
+
+/* ── OUTCOMES GRID ───────────────────────────────────────── */
+.cs-outcomes-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+    max-width: 760px;
+}
+
+.cs-outcome-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    padding: 16px 20px;
+    background-color: #F0F4F8;
+    border-radius: 8px;
+}
+
+.cs-outcome-item i {
+    color: #365476;
+    font-size: 16px;
+    margin-top: 2px;
+    flex-shrink: 0;
+}
+
+.cs-outcome-item p {
+    font-family: 'Hanken Grotesk', sans-serif;
+    font-size: 15px;
+    color: #0D2948;
+    margin: 0;
+    line-height: 1.5;
+}
+
+/* ── REFLECTION ──────────────────────────────────────────── */
+.cs-reflection p {
+    font-family: 'Hanken Grotesk', sans-serif;
+    font-size: 17px;
+    line-height: 1.75;
+    color: #1e3a5a;
+    max-width: 680px;
+    margin: 0;
+}
+
+/* ── FIGMA BANNER ────────────────────────────────────────── */
+.cs-figma-banner {
+    background-color: #F0F4F8;
+    padding: 24px 0;
+    border-bottom: 1px solid rgba(13, 41, 72, 0.08);
+}
+
+.cs-figma-banner .cs-section-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.cs-figma-banner p {
+    font-family: 'Hanken Grotesk', sans-serif;
+    font-size: 16px;
+    color: #3a5070;
+    margin: 0;
+}
+
+.cs-figma-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: linear-gradient(135deg, #365476 0%, #2c4665 100%);
+    color: #F9FAFB;
+    text-decoration: none;
+    font-family: 'Hanken Grotesk', sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    padding: 10px 22px;
+    border-radius: 999px;
+    transition: opacity 0.2s ease;
+}
+
+.cs-figma-btn:hover { opacity: 0.85; }
+
+/* ── PROJECT NAVIGATION ──────────────────────────────────── */
+.cs-project-nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 40px var(--section-px);
+    border-top: 1px solid rgba(13, 41, 72, 0.08);
+}
+
+.cs-nav-back,
+.cs-nav-next {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    text-decoration: none;
+    font-family: 'Hanken Grotesk', sans-serif;
+    font-size: 15px;
+    font-weight: 500;
+    color: #365476;
+    transition: gap 0.2s ease, opacity 0.2s ease;
+}
+
+.cs-nav-back:hover { gap: 12px; opacity: 0.75; }
+.cs-nav-next:hover { gap: 12px; opacity: 0.75; }
+
+/* ── RESPONSIVE ──────────────────────────────────────────── */
+@media (max-width: 960px) {
+    .cs-overview-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 24px;
+    }
+}
+
+@media (max-width: 700px) {
+    .cs-hero { padding: 32px 24px 32px; }
+    .cs-section { padding: 48px 0; }
+    .cs-section-inner { padding: 0 24px; }
+    .cs-project-nav { padding: 32px 24px; }
+
+    .cs-overview-grid { grid-template-columns: 1fr; gap: 20px; }
+
+    .cs-step { grid-template-columns: 48px 1fr; gap: 16px; }
+    .cs-step-number { font-size: 32px; }
+
+    .cs-image-placeholder { margin-left: 0; }
+
+    .cs-outcomes-grid { grid-template-columns: 1fr; }
+
+    .cs-cover-image img { height: 220px; }
+
+    .cs-figma-banner .cs-section-inner {
+        padding: 0 24px;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .cs-insight { font-size: 18px; }
+}
