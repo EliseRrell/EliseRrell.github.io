@@ -1443,7 +1443,9 @@ body.card-open { overflow: hidden; }
     .nav-links li { margin: 0; display: block; width: 100%; }
 
     .nav-links a {
-        display: block;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
         padding: 14px 24px;
         font-size: 17px;
         font-weight: 600;
@@ -1452,10 +1454,10 @@ body.card-open { overflow: hidden; }
         border: none;
         background: none;
         letter-spacing: 0.2px;
-        text-align: right !important;
         border-right: 3px solid transparent;
         border-left: none !important;
         transition: background-color 0.18s ease, border-color 0.18s ease;
+        text-decoration: none;
     }
 
     .nav-links a::after { display: none; }
