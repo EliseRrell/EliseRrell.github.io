@@ -20,19 +20,21 @@ const closeMenu = () => {
 };
 
 hamburger.addEventListener('click', () => {
-    if (hamburger.classList.contains('open')) {
-        closeMenu();
-    } else {
-        openMenu();
-    }
+    hamburger.classList.contains('open') ? closeMenu() : openMenu();
 });
 
-// Close when a nav link is clicked
 navLinksEl.querySelectorAll('a').forEach((link) => {
     link.addEventListener('click', closeMenu);
 });
 
-// Close on Escape
+document.addEventListener('click', (e) => {
+    if (hamburger.classList.contains('open') &&
+        !navWrapper.contains(e.target) &&
+        !hamburger.contains(e.target)) {
+        closeMenu();
+    }
+});
+
 document.addEventListener('keydown', (e) => {
     if (e.key === 'Escape' && hamburger.classList.contains('open')) closeMenu();
 });
@@ -130,6 +132,51 @@ document.addEventListener('keydown', (event) => {
     if (event.key === 'Escape' && projectCard.getAttribute('aria-hidden') === 'false') {
         closeProjectCard();
     }
+});
+
+/* Swipe down to close project popup on mobile */
+const dialog = document.querySelector('.project-card__dialog');
+let touchStartY = 0;
+let currentY = 0;
+let isDragging = false;
+
+dialog.addEventListener('touchstart', (e) => {
+    touchStartY = e.touches[0].clientY;
+    isDragging = false;
+    currentY = 0;
+}, { passive: true });
+
+dialog.addEventListener('touchmove', (e) => {
+    const dy = e.touches[0].clientY - touchStartY;
+    // Only start drag-to-close if dialog is scrolled to top and user drags down
+    if (!isDragging && dy > 10 && dialog.scrollTop <= 0) {
+        isDragging = true;
+        dialog.style.transition = 'none';
+    }
+    if (!isDragging) return;
+    currentY = Math.max(0, dy);
+    dialog.style.transform = `translateY(${currentY}px)`;
+    dialog.style.opacity = `${Math.max(0, 1 - currentY / 350)}`;
+}, { passive: true });
+
+dialog.addEventListener('touchend', () => {
+    if (!isDragging) return;
+    isDragging = false;
+    dialog.style.transition = 'transform 0.24s ease, opacity 0.24s ease';
+    if (currentY > 100) {
+        dialog.style.transform = `translateY(100%)`;
+        dialog.style.opacity = '0';
+        setTimeout(() => {
+            dialog.style.transform = '';
+            dialog.style.opacity = '';
+            dialog.style.transition = '';
+            closeProjectCard();
+        }, 240);
+    } else {
+        dialog.style.transform = '';
+        dialog.style.opacity = '';
+    }
+    currentY = 0;
 });
 
 /* ============================================================
